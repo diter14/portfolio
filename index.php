@@ -1,3 +1,13 @@
+<?php
+    $meta = [
+        'title' => 'Diter Terrones',
+        'description' => 'Diseño y desarrollo web. 🔥 Apasionado por la productividad y desarrollo personal',
+        'url' => 'https://diterterrones.com',
+        'cover' => './img/diter-terrones-cover.png',
+        'favicon' => './img/diter-terrones-favicon-32.png',
+        'theme_color' => '#5171fb'
+    ]
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,8 +15,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diter Terrones</title>
-    <link rel="icon" href="./img/diter-terrones-favicon-32.png" sizes="32x32" type="image/png">
-    <meta name="theme-color" content="#5171fb" />
+    <!-- metatags -->
+    <link rel="icon" href="<?= $meta['favicon']; ?>" sizes="32x32" type="image/png">
+    <meta name="theme-color" content="<?= $meta['theme_color']; ?>" />
+
+    <meta name="title" content="<?= $meta['title']; ?>">
+    <meta name="description" content="<?= $meta['description']; ?>">
+
+    <meta property="og:title" content="<?= $meta['title']; ?>">
+    <meta property="og:description" content="<?= $meta['description']; ?>">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="<?= $meta['url']; ?>">
+    <meta property="og:locale" content="es_PE">
+    <meta property="og:site_name" content="Diter Terrones">
+    <meta property="og:image" content="<?= $meta['cover']; ?>">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="<?= $meta['title']; ?>">
+    <meta property="twitter:site" content="@diter_terrones">
+    <meta property="twitter:description" content="<?= $meta['description']; ?>">
+    <meta name="twitter:image" content="<?= $meta['cover']; ?>">
+    <!-- metatags -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <style>
