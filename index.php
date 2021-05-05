@@ -14,6 +14,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/app.css">
     <title>Diter Terrones</title>
     <!-- metatags -->
     <link rel="icon" href="<?= $meta['favicon']; ?>" sizes="32x32" type="image/png">
@@ -28,7 +29,8 @@
     <meta property="og:url" content="<?= $meta['url']; ?>">
     <meta property="og:locale" content="es_PE">
     <meta property="og:site_name" content="Diter Terrones">
-    <meta property="og:image" content="<?= "//$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" . $meta['cover']; ?>">
+    <!-- <meta property="og:image" content="<?= "//$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" . $meta['cover']; ?>"> -->
+    <meta property="og:image" content="<?= "//$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" . 'img/diter-terrones-cover-open-graph.png'; ?>">
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:title" content="<?= $meta['title']; ?>">
@@ -37,63 +39,12 @@
     <meta name="twitter:image" content="<?= "//$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" . $meta['cover']; ?>">
     <!-- metatags -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <style>
-        * {
-            font-family: 'Poppins', Arial, sans-serif;
-        }
-        body {
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #5171fb;
-            background: linear-gradient(-60deg, #05353F, #5171fb, #C9D3FE);
-        	background-size: 400% 400%;
-            animation: gradient 7s ease infinite;
-        }
-        .main-app {
-            margin: 0 35px;
-        }
-        .card-presentation {
-            padding: 40px;
-            border-radius: 8px;
-            border: 1px solid #dcdcdc;
-            background-color: white;
-            box-shadow: 0 8px 16px 4px rgba(16, 31, 97, 0.5);
-        }
-
-        @keyframes gradient {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
-        }
-
-        /* utils */
-        .rrss-icon { width: 16px; height: 16px; margin-right: 8px;}
-        .title-xl { font-size: 48px; font-weight: 800; margin-top: 0;}
-        .text-center { text-align: center; }
-        ul {
-            width: 140px;
-            margin: 0 auto;
-            list-style: none;
-            padding: 0;
-        }
-        li {
-            padding: 4px 0;
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <main class="main-app">
-        <section class="card-presentation">
+    <main class="app">
+        <section class="card about-me">
             <h1 class="text-center title-xl">¡Hola! Soy <br> Diter Terrones</h1>
             <p class="text-center">🚧 Estoy construyendo algo genial</p>
             <p class="text-center">🏃🏽‍♂️💨 Mientras tanto, date una vuelta por mis redes:</p>

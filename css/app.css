@@ -1,0 +1,53 @@
+
+* {
+    font-family: 'Rubik', Arial, sans-serif;
+}
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #5171fb;
+    background: linear-gradient(-60deg, #05353F, #5171fb, #C9D3FE);
+    background-size: 400% 400%;
+    animation: gradient 7s ease infinite;
+}
+.app {
+    margin: 0 35px;
+}
+.card {
+    padding: 40px;
+    border-radius: 8px;
+    border: 1px solid #dcdcdc;
+    background-color: white;
+    box-shadow: 0 8px 16px 4px rgba(16, 31, 97, 0.5);
+}
+/* utils */
+.rrss-icon { width: 16px; height: 16px; margin-right: 8px;}
+.title-xl { font-size: 48px; font-weight: 700; margin-top: 0;}
+.title-l { font-size: 36px; font-weight: 700; margin-top: 0;}
+.title-m { font-size: 28px; font-weight: 600; margin-top: 0;}
+.title-s { font-size: 20px; font-weight: 600; margin-top: 0;}
+.text-center { text-align: center; }
+ul {
+    width: 140px;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+}
+li {
+    padding: 4px 0;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
