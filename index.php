@@ -59,7 +59,7 @@
             <div class="grid s-grid-1 m-grid-2">
                 <div class="customer grid s-grid-1">
                     <div class="customer-cover">
-                        <img src="img/portada expresarte mejor.png" alt="Customer Logo">
+                        <img loading="lazy" src="img/portada expresarte mejor.png" alt="Customer Logo">
                     </div>
                     <div class="customer-body">
                         <h3 class="title-s">ExpresArte Mejor</h3>
@@ -70,19 +70,19 @@
                         <ul class="customer-links">
                             <li class="customer-link">
                                 🔗 
-                                <a href="https://www.figma.com/proto/CAl00bC8mfI1DUJJuvw5VU/ExpresArte-Mejor-Web?page-id=128%3A361&node-id=168%3A0&viewport=321%2C230%2C0.1720537692308426&scaling=scale-down-width">
+                                <a target="_blank" href="https://www.figma.com/proto/CAl00bC8mfI1DUJJuvw5VU/ExpresArte-Mejor-Web?page-id=128%3A361&node-id=168%3A0&viewport=321%2C230%2C0.1720537692308426&scaling=scale-down-width">
                                     Mockup
                                 </a>
                             </li>
                             <li class="customer-link">
                                 🔗 
-                                <a href="https://expresartemejor.com">
+                                <a target="_blank" href="https://expresartemejor.com">
                                     Sitio Web
                                 </a>
                             </li>
                             <li class="customer-link">
                                 🔗
-                                <a href="https://www.facebook.com/diter.terrones/posts/272220434488887">
+                                <a target="_blank" href="https://www.facebook.com/diter.terrones/posts/272220434488887">
                                     Publicación
                                 </a>
                             </li>
@@ -91,7 +91,7 @@
                 </div>
                 <div class="customer grid s-grid-1">
                     <div class="customer-cover">
-                        <img src="img/portada aremisse lima.png" alt="Customer Logo">
+                        <img loading="lazy" src="img/portada aremisse lima.png" alt="Customer Logo">
                     </div>
                     <div class="customer-body">
                         <h3 class="title-s">Aremisse Lima</h3>
@@ -102,19 +102,19 @@
                         <ul class="customer-links">
                             <li class="customer-link">
                                 🔗 
-                                <a href="https://www.figma.com/proto/wJ7CvvekA9bTvxy70LLZeG/Aremisse-Website?page-id=105%3A0&node-id=111%3A705&viewport=3113%2C1028%2C0.3367941081523895&scaling=scale-down-width">
+                                <a target="_blank" href="https://www.figma.com/proto/wJ7CvvekA9bTvxy70LLZeG/Aremisse-Website?page-id=105%3A0&node-id=111%3A705&viewport=3113%2C1028%2C0.3367941081523895&scaling=scale-down-width">
                                     Mockup
                                 </a>
                             </li>
                             <li class="customer-link">
                                 🔗 
-                                <a href="https://aremisse.com">
+                                <a target="_blank" href="https://aremisse.com">
                                     Sitio Web
                                 </a>
                             </li>
                             <li class="customer-link">
                                 🔗
-                                <a href="https://www.facebook.com/diter.terrones/posts/239367091107555">
+                                <a target="_blank" href="https://www.facebook.com/diter.terrones/posts/239367091107555">
                                     Publicación
                                 </a>
                             </li>
@@ -123,7 +123,7 @@
                 </div>
                 <div class="customer grid s-grid-1">
                     <div class="customer-cover">
-                        <img src="img/portada el rico store.png" alt="Customer Logo">
+                        <img loading="lazy" src="img/portada el rico store.png" alt="Customer Logo">
                     </div>
                     <div class="customer-body">
                         <h3 class="title-s">El Rico Store</h3>
@@ -134,13 +134,13 @@
                         <ul class="customer-links">
                             <li class="customer-link">
                                 🔗 
-                                <a href="https://www.figma.com/proto/JP4qrPd6zzquKtGrTfDpYh/El-Rico-Store?page-id=60%3A2&node-id=79%3A0&viewport=-38%2C-464%2C0.4282759130001068&scaling=scale-down-width">
+                                <a target="_blank" href="https://www.figma.com/proto/JP4qrPd6zzquKtGrTfDpYh/El-Rico-Store?page-id=60%3A2&node-id=79%3A0&viewport=-38%2C-464%2C0.4282759130001068&scaling=scale-down-width">
                                     Mockup
                                 </a>
                             </li>
                             <li class="customer-link">
                                 🔗 
-                                <a href="https://elricostore.com">
+                                <a target="_blank" href="https://elricostore.com">
                                     Sitio Web
                                 </a>
                             </li>
@@ -149,7 +149,7 @@
                 </div>
                 <div class="customer grid s-grid-1">
                     <div class="customer-cover">
-                        <img src="img/portada fisio megi.png" alt="Customer Logo">
+                        <img loading="lazy" src="img/portada fisio megi.png" alt="Customer Logo">
                     </div>
                     <div class="customer-body">
                         <h3 class="title-s">Fisio Megi</h3>
@@ -160,13 +160,13 @@
                         <ul class="customer-links">
                             <li class="customer-link">
                                 🔗 
-                                <a href="https://www.figma.com/proto/797OEbIQrTYLp4NyB9JmED/Fisio-MEGI-Landing?page-id=232%3A6&node-id=232%3A7&viewport=539%2C356%2C0.09983249753713608&scaling=min-zoom">
+                                <a target="_blank" href="https://www.figma.com/proto/797OEbIQrTYLp4NyB9JmED/Fisio-MEGI-Landing?page-id=232%3A6&node-id=232%3A7&viewport=539%2C356%2C0.09983249753713608&scaling=min-zoom">
                                 Prototipado
                                 </a>
                             </li>
                             <li class="customer-link">
                                 🔗 
-                                <a href="https://www.facebook.com/diter.terrones/posts/245082333869364">
+                                <a target="_blank" href="https://www.facebook.com/diter.terrones/posts/245082333869364">
                                 Publicación
                                 </a>
                             </li>
