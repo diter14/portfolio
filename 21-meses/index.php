@@ -61,7 +61,7 @@
             <strong>TE QUIERO, TE ADORO</strong> y ese amor que tenemos crece sin medida, crece porque ambos aportamos lo mejor para nosotros.<br>
             Gracias por tantas aventuras y las que aún nos faltan vivir, mi amor 💖<br>
             Me enamoras totalmente, con tu sensibilidad y ternura, con tu amor inmenso, con tu determinación para sacar adelante tus proyectos, con tu increíble fuerza, con lo graciosa que eres, aplicada en sus estudios, responsable y amorosa con su familia.<br>
-            Eres extraordinariamente genial! Una mujer maravillosa que es exitosa y feliz por su propia cuenta y <em>recuérdalo siempre, me has demostrado que eres suficiente y capaz de lograr lo que te propongas, te vales por ti misma</em>. <strong>Mi luchona 🥰🤭</strong><br>
+            Eres extraordinariamente genial! Una mujer maravillosa que es exitosa y feliz por su propia cuenta y <em>recuérdalo siempre, me has demostrado que eres suficiente y capaz de lograr lo que te propongas, te vales por ti misma</em>. <strong>Mi luchona </strong> 🥰🤭<br>
             Gracias una vez más por compartirme tu felicidad. ¿Recuerdas que una vez te comenté sobre algo que leí sobre el amor? <em>El amor está asociado a un área del cerebro en la que no se procesa el lenguaje y eso explica por qué a veces no podamos describir lo que sentimos.</em> <br>
             Aquí es donde me sucede eso, quiero aterrizar todas las cosas hermosas que siento por ti pero mi cerebrito se queda pequeño en el intento🤭. <br> Así que trataré de resumirlo en un enorme <strong>¡ TE QUIERO MUCHÍSIMO, GIANELLA ASQUI !</strong>
             Sigamos creciendo y mejorando hasta el cielo, mi amor 🔥 <br>
