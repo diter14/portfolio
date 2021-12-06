@@ -3,7 +3,7 @@
         'title' => '¡Felices 21 meses!',
         'description' => 'Celebración de nuestros 21 meses. 🐥 Diter y Gianella 🐥',
         'url' => 'https://diterterrones.com',
-        'cover' => '21-meses/img/05.jpg',
+        'cover' => 'img/09.jpg',
         'favicon' => '../img/diter-terrones-favicon-32.png',
         'theme_color' => '#5171fb'
     ]
@@ -30,7 +30,7 @@
     <meta property="og:url" content="<?= $meta['url']; ?>">
     <meta property="og:locale" content="es_PE">
     <meta property="og:site_name" content="Diter Terrones">
-    <meta property="og:image" content="<?= "//$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" . '21-meses/img/05.jpg'; ?>">
+    <meta property="og:image" content="<?= "//$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" . 'img/09.jpg'; ?>">
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:title" content="<?= $meta['title']; ?>">
