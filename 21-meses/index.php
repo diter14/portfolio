@@ -12,7 +12,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/app.css">
     <title>Diter Terrones</title>
@@ -43,6 +43,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+    <audio controls autoplay src="./audio/mystery-of-love.mp3">
+    </audio>
     <div class="s-cross-center s-mb-3 s-center ribbon">
         <h1>¡Felices 21 Meses! Mi Pollita </h1>
         <img src="./img/pollita-2.gif" alt="">
@@ -121,4 +123,15 @@
             <img src="./img/13.jpg" alt="">
         </div>
     </div>
+
+    <script>
+        // setTimeout(() => {
+            // window.addEventListener("DOMContentLoaded", event => {
+            //     const audio = document.querySelector("audio");
+            //     audio.volume = 0.2;
+            //     audio.play();
+            // });
+            // console.log('test')
+        // }, 3000);
+    </script>
 </body>
