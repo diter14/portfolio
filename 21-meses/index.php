@@ -53,21 +53,21 @@
             <strong>¡¡¡¡¡ Mi Cushiiiiiiiiiiii !!!!</strong> (<em>Espero que leas esto con mi voz y en tono chillón como lo suelo hacer</em> 🤭). <br>
             Mi Princesa hermosa, hoy se cumplen <strong>21 meses</strong> desde aquel día que nos dimos nuestro primer besito y aceptamos viajar en esta aventura <strong>juntos</strong> 💖.<br>
             Escribo esto con el corazón en la mano pues hemos vivido tantas cositas, nos hemos reído sin cansancio y también llorado, hemos viajado y también nos hemos quedado acurrucados, hemos encontrado muchas diferencias y también muchas coincidencias 😍, nos hemos conocido mucho más y hemos aprendido uno del otro, hemos pasado por momentos personales muy difíciles y aquí seguimos, más fuertes que antes.<br>
-            <strong>Agradezco infinitamente que Dios te haya puesto en mi camino</strong>, que hayamos coincidido en este vasto universo lleno de infitas posibilidades, agradezco que me hayas enamorado con tu sonrisita y tu inacabable ternura.
-            Gracias! Gracias! Gracias! Por comprenderme a pesar de mis locuras, a pesar de mis errores, a pesar de las cosas que tengo que mejorar. Gracias por estar a mi lado cada segundo de estos 21 meses.<br>
+            <strong>Agradezco infinitamente que Dios te haya puesto en mi camino</strong>, que hayamos coincidido en este vasto universo lleno de infinitas posibilidades, agradezco que me hayas enamorado con tu sonrisita y tu inacabable ternura.
+            Gracias! Gracias! Gracias! Por comprenderme a pesar de mis locuras, a pesar de mis errores, a pesar de las cosas que tengo que mejorar. Gracias por estar a mi lado, en cuerpo y corazón, cada segundo de estos 21 meses.<br>
             Gracias por enseñarme a ser más determinado, a tener más humanidad y sensibilidad con los que me rodean, <em>gracias por creer en mí incluso más de lo que yo creo en mí.</em><br>
             <strong>TE QUIERO, TE ADORO</strong> y ese amor que tenemos crece sin medida, crece porque ambos aportamos lo mejor para nosotros.<br>
             Gracias por tantas aventuras y las que aún nos faltan vivir, mi amor 💖<br>
             Me enamoras totalmente, con tu sensibilidad y ternura, con tu amor inmenso, con tu determinación para sacar adelante tus proyectos, con tu increíble fuerza, con lo graciosa que eres, aplicada en sus estudios, responsable y amorosa con su familia.<br>
-            Eres extraordinariamente genial! Una mujer maravillosa que es exitosa y feliz por su propia cuenta, <em>recuérdalo siempre, mi vida, me has demostrado que eres suficiente y capaz de lograr lo que te propongas</em>.<br>
-            Gracias una vez más por compartirme tu felicidad. ¿Recuerdas que una vez te comenté sobre algo que leí sobre el amor? <em>El amor está asociado a un área del cerebro en la que no se procesa el lenguaje, eso explica por qué a veces no podamos describir lo que sentimos</em> <br>
-            Aquí es donde me sucede eso, quiero aterrizar todas las cosas hermosa que siento por ti pero mi cerebrito se queda pequeño 🤭. Lo trataré de resumir en un enorme <strong>¡ TE QUIERO MUCHÍSIMO, GIANELLA ASQUI !</strong>
+            Eres extraordinariamente genial! Una mujer maravillosa que es exitosa y feliz por su propia cuenta y <em>recuérdalo siempre, me has demostrado que eres suficiente y capaz de lograr lo que te propongas, te vales por ti misma</em>. <strong>Mi luchona 🥰🤭</strong><br>
+            Gracias una vez más por compartirme tu felicidad. ¿Recuerdas que una vez te comenté sobre algo que leí sobre el amor? <em>El amor está asociado a un área del cerebro en la que no se procesa el lenguaje y eso explica por qué a veces no podamos describir lo que sentimos.</em> <br>
+            Aquí es donde me sucede eso, quiero aterrizar todas las cosas hermosas que siento por ti pero mi cerebrito se queda pequeño en el intento🤭. <br> Así que trataré de resumirlo en un enorme <strong>¡ TE QUIERO MUCHÍSIMO, GIANELLA ASQUI !</strong>
             Sigamos creciendo y mejorando hasta el cielo, mi amor 🔥 <br>
-            Gracias Y <strong>¡Felices 21 Meses Mi Pollita!</strong>
+            Gracias y <strong>¡Felices 21 Meses Mi Pollita! </strong>🐥💖🐥
             <br>
             <br>
             <br>
-            Aquí te comparto bellos recuerdos, hermosos momentos que pasamos <em>Aunque bien dicen, de los mejores momentos no hubo momento de tomar una foto </em> 🤭Esa es nuestra relación, llena de <strong>mejores momentos</strong>
+            Y aquí te comparto bellos y hermosos momentos que vivimos <em>Aunque bien dicen por ahí, que de los mejores momentos no hubo momento de tomar una foto </em> 🤭 y esa es nuestra relación, repleta de <strong>mejores momentos</strong>
         </p>
         <img src="./img/pollitos.gif" alt="">
     </div>
