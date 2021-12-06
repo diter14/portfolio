@@ -1,6 +1,6 @@
 <?php
     $meta = [
-        'title' => '¡Felices 21 meses!',
+        'title' => '💖 ¡Felices 21 meses!',
         'description' => 'Celebración de nuestros 21 meses. 🐥 Diter y Gianella 🐥',
         'url' => 'https://diterterrones.com',
         'cover' => '/21-meses/img/09.jpg',
