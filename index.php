@@ -30,7 +30,7 @@
     <meta property="og:locale" content="es_PE">
     <meta property="og:site_name" content="Diter Terrones">
     <!-- <meta property="og:image" content="<?= "//$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" . $meta['cover']; ?>"> -->
-    <meta property="og:image" content="<?= '/img/diter-terrones-cover-open-graph.png'; ?>">
+    <meta property="og:image" content="<?= 'https://diterterrones.com/img/diter-terrones-cover-open-graph.png'; ?>">
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:title" content="<?= $meta['title']; ?>">
