@@ -15,7 +15,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/app.css">
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <title>Diter Terrones</title>
     <!-- metatags -->
     <link rel="icon" href="<?= $meta['favicon']; ?>" sizes="32x32" type="image/png">
@@ -41,78 +40,40 @@
     <!-- metatags -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"> -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <main class="app">
+    <main class="app card">
         <section class="section about-me">
-            <img class="about-me-profile" src="./img/Diter-Terrones-Profile.v3.png" alt="Diter Terrones">
+            <img class="about-me-profile" src="./img/Diter-Terrones-Profile.png" alt="Diter Terrones">
             <div class="about-me-body">
                 <p class="title-s about-me-title">¡Hola! Soy</p>
                 <h1 class="title-xl about-me-title">Diter Terrones</h1>
-                <h3 class="title-s about-me-title blue">Diseñador UI - Frontend Developer</h3>
                 <p class="">🔥 Soy apasionado por la tecnología y el diseño. </p>
-                <p class="">🎨 Me encanta diseñar y construir webs minimalistas, inspiradoras y disruptivas. </p>
+                <p class="">🎨 Me encanta diseñar webs minimalistas, inspiradoras y disruptivas. </p>
                 <p class="">🚀 Sobre todo volverlas realidad.</p>
             </div>
         </section>
-        <section class="section portfolio" id="portfolio">
-            <h2 class="title-m">💼 Mi trabajo</h2>
+        <section class="section portfolio">
+            <h2 class="title-m">💼 ¿Quieres ver mi trabajo?</h2>
             <div class="grid s-grid-1 m-grid-2">
                 <div class="customer grid s-grid-1">
                     <div class="customer-cover">
-                        <a href="https://elricostore.com" target="_blank">
-                            <img loading="lazy" src="img/portada el rico store.png" alt="Customer Cover">
-                        </a>
-                    </div>
-                    <div class="customer-body">
-                        <h3 class="title-s">El Rico Store</h3>
-                        <p class="text-s text-color-normal">Construcción de e-Commerce para empresa de venta de ropa geek.</p>
-                        <div class="customer-tags">
-                            <span class="customer-tag red">Diseño Web</span>
-                            <span class="customer-tag blue">e-Commerce</span>
-                            <span class="customer-tag">Wordpress</span>
-                        </div>
-                        <ul class="customer-links">
-                            <li class="customer-link">
-                                🔗 
-                                <a target="_blank" href="https://www.figma.com/proto/JP4qrPd6zzquKtGrTfDpYh/El-Rico-Store?page-id=60%3A2&node-id=79%3A0&viewport=-38%2C-464%2C0.4282759130001068&scaling=scale-down-width">
-                                    Mockup
-                                </a>
-                            </li>
-                            <li class="customer-link">
-                                🔗 
-                                <a target="_blank" href="https://elricostore.com">
-                                    Sitio Web
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="customer grid s-grid-1">
-                    <div class="customer-cover">
-                        <a href="https://expresartemejor.com" target="_blank">
-                            <img loading="lazy" src="img/portada expresarte mejor.png" alt="Customer Cover">
-                        </a>
+                        <img loading="lazy" src="img/portada expresarte mejor.png" alt="Customer Logo">
                     </div>
                     <div class="customer-body">
                         <h3 class="title-s">ExpresArte Mejor</h3>
-                        <p class="text-s text-color-normal">Construcción de plataforma web orientado a cursos de oratoria.</p>
                         <div class="customer-tags">
                             <span class="customer-tag">Plataforma Web</span>
                             <span class="customer-tag red">Diseño Web</span>
                         </div>
                         <ul class="customer-links">
-                            <!-- <li class="customer-link">
+                            <li class="customer-link">
                                 🔗 
                                 <a target="_blank" href="https://www.figma.com/proto/CAl00bC8mfI1DUJJuvw5VU/ExpresArte-Mejor-Web?page-id=128%3A361&node-id=168%3A0&viewport=321%2C230%2C0.1720537692308426&scaling=scale-down-width">
                                     Mockup
                                 </a>
-                            </li> -->
+                            </li>
                             <li class="customer-link">
                                 🔗 
                                 <a target="_blank" href="https://expresartemejor.com">
@@ -130,98 +91,10 @@
                 </div>
                 <div class="customer grid s-grid-1">
                     <div class="customer-cover">
-                        <a href="https://ingymec.com" target="_blank">
-                            <img loading="lazy" src="img/cover ingymec.png" alt="INGYMEC Cover">
-                        </a>
-                    </div>
-                    <div class="customer-body">
-                        <h3 class="title-s">INGYMEC</h3>
-                        <p class="text-s text-color-normal">Diseño y construcción de sitio web corporativo del rubro metal mecánica.</p>
-                        <div class="customer-tags">
-                            <span class="customer-tag red">Diseño Web</span>
-                            <span class="customer-tag yellow">Wordpress</span>
-                            <span class="customer-tag blue">Divi Builder</span>
-                        </div>
-                        <ul class="customer-links">
-                            <li class="customer-link">
-                                🔗 
-                                <a target="_blank" href="https://ingymec.com">
-                                    Sitio Web
-                                </a>
-                            </li>
-                            <li class="customer-link">
-                                🔗
-                                <a target="_blank" href="https://www.facebook.com/diter.terrones/posts/457294005981528">
-                                    Publicación
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="customer grid s-grid-1">
-                    <div class="customer-cover">
-                        <a href="https://aktechnicalsolutions.com" target="_blank">
-                            <img loading="lazy" src="img/cover ak technical.png" alt="AK Technical Cover">
-                        </a>
-                    </div>
-                    <div class="customer-body">
-                        <h3 class="title-s">AK Technical's Solutions</h3>
-                        <p class="text-s text-color-normal">Diseño y construcción de sitio web corporativo del rubro de reparaciones mineras.</p>
-                        <div class="customer-tags">
-                            <span class="customer-tag">Diseño Web</span>
-                            <span class="customer-tag yellow">Wordpress</span>
-                            <span class="customer-tag blue">Elementor</span>
-                        </div>
-                        <ul class="customer-links">
-                            <li class="customer-link">
-                                🔗 
-                                <a target="_blank" href="https://aktechnicalsolutions.com">
-                                    Sitio Web
-                                </a>
-                            </li>
-                            <li class="customer-link">
-                                🔗
-                                <a target="_blank" href="https://www.facebook.com/diter.terrones/posts/433242521720010">
-                                    Publicación
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="customer grid s-grid-1">
-                    <div class="customer-cover">
-                        <a href="https://www.figma.com/proto/Bok2k2Y1RPn5oP1Guva0YP/InterConnecta-Employee-Profile?page-id=1%3A6&node-id=1001%3A9345&viewport=-90%2C-2484%2C0.24&scaling=min-zoom&starting-point-node-id=1001%3A9345&show-proto-sidebar=1" target="_blank">
-                            <img loading="lazy" src="img/cover interconnecta.png" alt="InterConnecta Cover">
-                        </a>
-                    </div>
-                    <div class="customer-body">
-                        <h3 class="title-s">InterConnecta</h3>
-                        <p class="text-s text-color-normal">Plataforma web personalizada para visualizar métricas y reportes de empleados.</p>
-                        <div class="customer-tags">
-                            <span class="customer-tag">Diseño Web</span>
-                            <span class="customer-tag yellow">Laravel</span>
-                            <span class="customer-tag blue">Vue.js</span>
-                            <span class="customer-tag">Figma</span>
-                        </div>
-                        <ul class="customer-links">
-                            <li class="customer-link">
-                                🔗 
-                                <a target="_blank" href="https://www.figma.com/proto/Bok2k2Y1RPn5oP1Guva0YP/InterConnecta-Employee-Profile?page-id=1%3A6&node-id=1001%3A9345&viewport=-90%2C-2484%2C0.24&scaling=min-zoom&starting-point-node-id=1001%3A9345&show-proto-sidebar=1">
-                                    Mockup - Diseño
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="customer grid s-grid-1">
-                    <div class="customer-cover">
-                        <a href="https://aremisse.com" target="_blank">
-                            <img loading="lazy" src="img/portada aremisse lima.png" alt="Aremisse Cover">
-                        </a>
+                        <img loading="lazy" src="img/portada aremisse lima.png" alt="Customer Logo">
                     </div>
                     <div class="customer-body">
                         <h3 class="title-s">Aremisse Lima</h3>
-                        <p class="text-s text-color-normal">Sitio web corporativo para empresa de transporte de personal y turístico.</p>
                         <div class="customer-tags">
                             <span class="customer-tag red">Diseño Web</span>
                             <span class="customer-tag green">Sitio Web</span>
@@ -250,14 +123,39 @@
                 </div>
                 <div class="customer grid s-grid-1">
                     <div class="customer-cover">
-                        <img loading="lazy" src="img/portada fisio megi.png" alt="Customer Cover">
+                        <img loading="lazy" src="img/portada el rico store.png" alt="Customer Logo">
+                    </div>
+                    <div class="customer-body">
+                        <h3 class="title-s">El Rico Store</h3>
+                        <div class="customer-tags">
+                            <span class="customer-tag red">Diseño Web</span>
+                            <span class="customer-tag green">Tienda Web</span>
+                        </div>
+                        <ul class="customer-links">
+                            <li class="customer-link">
+                                🔗 
+                                <a target="_blank" href="https://www.figma.com/proto/JP4qrPd6zzquKtGrTfDpYh/El-Rico-Store?page-id=60%3A2&node-id=79%3A0&viewport=-38%2C-464%2C0.4282759130001068&scaling=scale-down-width">
+                                    Mockup
+                                </a>
+                            </li>
+                            <li class="customer-link">
+                                🔗 
+                                <a target="_blank" href="https://elricostore.com">
+                                    Sitio Web
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="customer grid s-grid-1">
+                    <div class="customer-cover">
+                        <img loading="lazy" src="img/portada fisio megi.png" alt="Customer Logo">
                     </div>
                     <div class="customer-body">
                         <h3 class="title-s">Fisio Megi</h3>
-                        <p class="text-s text-color-normal">Diseño web para centro de Fisioterapia y Bienestar.</p>
                         <div class="customer-tags">
                             <span class="customer-tag yellow">Prototipado</span>
-                            <span class="customer-tag blue">Diseño Web</span>
+                            <span class="customer-tag red">Diseño Web</span>
                         </div>
                         <ul class="customer-links">
                             <li class="customer-link">
@@ -312,10 +210,5 @@
             <h2 class="title-m">🤝🏽 ¿Te gustó mi contenido?</h2>
         </section> -->
     </main>
-    <footer class="footer">
-        <p class="text-center text-s">
-            Copyright ©<?= date('Y'); ?>. Todos los derechos reservados. Hecho con el 💗 por <span class="text-color-yellow">Diter Terrones</span>
-        </p>
-    </footer>
 </body>
 </html>
