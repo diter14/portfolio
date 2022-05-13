@@ -1,14 +1,18 @@
 
 * {
-    font-family: 'Rubik', Arial, sans-serif;
+    /* font-family: 'Rubik', Arial, sans-serif; */
+    font-family: 'DM Sans', Helvetica, sans-serif;
 }
+
 body {
     margin: 0;
     display: flex;
     justify-content: center;
-    background-color: #5171fb;
+    flex-direction: column;
+    /* background-color: #5171fb;
     background: linear-gradient(-60deg, #05353F, #5171fb, #C9D3FE);
-    background-size: 400% 400%;
+    background-size: 400% 400%; */
+    font-size: 15px;
     animation: gradient 7s ease infinite;
 }
 .app {
@@ -25,7 +29,7 @@ body {
 }
 
 .section {
-    margin-bottom: 48px;
+    margin-bottom: 72px;
 }
 .section h2 {
     margin-bottom: 24px;
@@ -41,9 +45,13 @@ body {
     height: 200px;
     width: 200px;
     margin-bottom: 32px;
+    border: 5px solid #FFD642;
 }
 .about-me-title { 
     text-align: center;
+}
+.about-me-title.blue { 
+    color: #273FFF;
 }
 @media screen and (min-width: 640px) {
     .about-me {
@@ -59,17 +67,18 @@ body {
 }
 
 .customer {
-    /* padding: 12px; */
+    padding: 12px;
     /* border: 1px solid #ccc; */
     border-radius: 8px;
     margin-bottom: 32px;
 }
 .customer-cover img {
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     border-radius: 4px;
     filter: grayscale(100%);
     transition: 0.3s;
+    box-shadow: 0 4px 10px 4px rgb(174 190 205 / 30%);
 }
 .customer-cover img:hover {
     filter: grayscale(0%);
@@ -86,13 +95,14 @@ body {
 .customer-body .customer-tag {
     font-size: 9px;
     color: white;
-    padding: 3px;
-    border-radius: 3px;
-    background-color: #5171fb;
+    padding: 3px 6px;
+    border-radius: 8px;
+    background-color: #202326;
 }
 .customer-tag.red {background-color: #D1273F;}
 .customer-tag.green {background-color: #27D1B9;}
 .customer-tag.yellow {background-color: #EDC14F;}
+.customer-tag.blue {background-color: #273FFF;}
 .customer-body .customer-link {
     /* display: block; */
     padding: 6px 0;
@@ -114,6 +124,11 @@ body {
     min-width: auto !important;
 }
 
+.footer {
+    background-color: #202326;
+    padding: 24px;
+    color: white;
+}
 
 .grid {
     display: grid;
@@ -136,11 +151,22 @@ body {
 
 /* utils */
 .title-badge { font-size: 13px; font-weight: 400;}
-.title-xl { font-size: 48px; font-weight: 700; margin-top: 0; margin-bottom: 12px;}
-.title-l { font-size: 36px; font-weight: 700; margin-top: 0; margin-bottom: 12px;}
-.title-m { font-size: 28px; font-weight: 600; margin-top: 0; margin-bottom: 12px;}
-.title-s { font-size: 20px; font-weight: 600; margin-top: 0; margin-bottom: 12px;}
+.title-xl { font-size: 48px; font-weight: 900; margin-top: 0; margin-bottom: 10px; font-family: 'Red Hat Display';}
+.title-l { font-size: 36px; font-weight: 800; margin-top: 0; margin-bottom: 8px; font-family: 'Red Hat Display';}
+.title-m { font-size: 28px; font-weight: 800; margin-top: 0; margin-bottom: 6px; font-family: 'Red Hat Display';}
+.title-s { font-size: 20px; font-weight: 800; margin-top: 0; margin-bottom: 6px; font-family: 'Red Hat Display';}
+.text-m { font-size: 16px; margin-top: 0; margin-bottom: 6px;}
+.text-s { font-size: 12px; margin-top: 0; margin-bottom: 5px;}
+.text-xs { font-size: 9px; margin-top: 0; margin-bottom: 4px;}
 .text-center { text-align: center; }
+.mb-1 { margin-bottom: 1em; }
+.mb-2 { margin-bottom: 2em; }
+.mb-3 { margin-bottom: 3em; }
+.mb-4 { margin-bottom: 4em; }
+.mb-5 { margin-bottom: 5em; }
+.text-color-normal { color: #464C53; }
+.text-color-blue { color: #273FFF; }
+.text-color-yellow { color: #FFDA00; }
 ul {
     margin: 0 auto;
     list-style: none;
