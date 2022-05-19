@@ -473,20 +473,44 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mb-5 {
   margin-bottom: 1.25rem;
 }
+.mr-\[22px\] {
+  margin-right: 22px;
+}
+.ml-\[22px\] {
+  margin-left: 22px;
+}
+.inline-block {
+  display: inline-block;
+}
 .flex {
   display: flex;
 }
 .grid {
   display: grid;
 }
+.h-80 {
+  height: 20rem;
+}
+.h-\[80px\] {
+  height: 80px;
+}
+.h-auto {
+  height: auto;
+}
 .min-h-screen {
   min-height: 100vh;
 }
+.w-80 {
+  width: 20rem;
+}
+.w-\[80px\] {
+  width: 80px;
+}
+.w-\[40px\] {
+  width: 40px;
+}
 .max-w-6xl {
   max-width: 72rem;
-}
-.grid-cols-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -494,8 +518,17 @@ Ensure the default browser behavior of the `hidden` attribute.
 .grid-rows-1 {
   grid-template-rows: repeat(1, minmax(0, 1fr));
 }
+.items-center {
+  align-items: center;
+}
+.justify-end {
+  justify-content: flex-end;
+}
 .justify-center {
   justify-content: center;
+}
+.rounded-full {
+  border-radius: 9999px;
 }
 .bg-gray-100 {
   --tw-bg-opacity: 1;
@@ -505,23 +538,31 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 1;
   background-color: rgb(4 4 5 / var(--tw-bg-opacity));
 }
-.p-\[50px\] {
-  padding: 50px;
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+.bg-yellow-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 218 0 / var(--tw-bg-opacity));
 }
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
-.py-5 {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-}
 .py-\[50px\] {
   padding-top: 50px;
   padding-bottom: 50px;
 }
+.py-\[20px\] {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
 .text-center {
   text-align: center;
+}
+.align-middle {
+  vertical-align: middle;
 }
 .text-sm {
   font-size: 0.875rem;
@@ -580,10 +621,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:mb-0 {
     margin-bottom: 0px;
-  }
-
-  .md\:grid-cols-1 {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
   .md\:grid-cols-2 {
