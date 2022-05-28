@@ -1,5 +1,5 @@
 <header class="main-header transparent">
-    <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 grid-rows-1 py-[20px]">
+    <div class="container mx-auto grid grid-cols-2 grid-rows-1 py-[20px]">
         <div class="main-logo w-[80px] h-[80px] bg-white rounded-full flex">
             <img 
                 class="w-[40px] h-auto ml-[22px]"

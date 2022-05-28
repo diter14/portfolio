@@ -8,6 +8,21 @@ module.exports = {
     ],
     theme: {
         extend: {},
+        fontFamily: {
+            'heading': ['Red Hat Display', 'sans-serif'],
+            'body': ['DM Sans', 'sans-serif'],
+        },
+        fontSize: {
+            '2xl': ['54px', '140%'],
+            'heading-h1': ['48px', '140%'],
+            'heading-h2': ['40px', '140%'],
+            'heading-h3': ['32px', '140%'],
+            'heading-h4': ['24px', '140%'],
+            xl: ['18px', '180%'],
+            md: ['16px', '180%'],
+            sm: ['14px', '180%'],
+            xs: ['12px', '180%'],
+        },
         colors: {
             transparent: 'transparent',
             current: 'currentColor',
@@ -52,8 +67,8 @@ module.exports = {
                 100: '#E1E4E6',
                 50: '#F4F5F6',
             },
-            bg: {
-                normal: '#E1E4E6',
+            body: {
+                light: '#F6F7F8',
                 alt: '#A5ADB4',
             },
             texts: {
