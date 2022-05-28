@@ -11,16 +11,56 @@ module.exports = {
         colors: {
             transparent: 'transparent',
             current: 'currentColor',
-            'black': {
-                500: '#202326',
-                900: '#040405'
-            },
             white: colors.white,
             gray: colors.gray,
             emerald: colors.emerald,
             indigo: colors.indigo,
+            border: '#CBD1D7',
             'yellow': {
-                500: '#FFDA00'
+                900: '#806D00',
+                800: '#9F8800',
+                700: '#BFA400',
+                600: '#DFBF00',
+                500: '#FFDA00',
+                400: '#FFE340',
+                300: '#FFED80',
+                200: '#FFF19F',
+                100: '#FFF6BF',
+                50: '#FFFDEF',
+            },
+            'blue': {
+                900: '#001193',
+                800: '#0015B8',
+                700: '#0019DC',
+                600: '#021FFF',
+                500: '#273FFF',
+                400: '#4257FF',
+                300: '#7887FF',
+                200: '#AEB7FF',
+                100: '#E4E7FF',
+                50: '#F8F9FF',
+            },
+            'black': {
+                900: '#040405',
+                800: '#0C0D0E',
+                700: '#141618',
+                600: '#1C1F22',
+                500: '#202326',
+                400: '#393F44',
+                300: '#6B7680',
+                200: '#A5ADB4',
+                100: '#E1E4E6',
+                50: '#F4F5F6',
+            },
+            bg: {
+                normal: '#E1E4E6',
+                alt: '#A5ADB4',
+            },
+            texts: {
+                title: '#202326',
+                normal: '#464C53',
+                light: '#68737D',
+                lighter: '#202326',
             }
         }
     },

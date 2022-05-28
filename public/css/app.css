@@ -400,7 +400,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-ring-inset:  ;
   --tw-ring-offset-width: 0px;
   --tw-ring-offset-color: #fff;
-  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-color: rgb(39 63 255 / 0.5);
   --tw-ring-offset-shadow: 0 0 #0000;
   --tw-ring-shadow: 0 0 #0000;
   --tw-shadow: 0 0 #0000;
@@ -473,9 +473,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mb-5 {
   margin-bottom: 1.25rem;
 }
-.mr-\[22px\] {
-  margin-right: 22px;
-}
 .ml-\[22px\] {
   margin-left: 22px;
 }
@@ -488,9 +485,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .grid {
   display: grid;
 }
-.h-80 {
-  height: 20rem;
-}
 .h-\[80px\] {
   height: 80px;
 }
@@ -499,9 +493,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .min-h-screen {
   min-height: 100vh;
-}
-.w-80 {
-  width: 20rem;
 }
 .w-\[80px\] {
   width: 80px;
