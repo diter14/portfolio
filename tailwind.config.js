@@ -18,10 +18,12 @@ module.exports = {
             'heading-h2': ['40px', '140%'],
             'heading-h3': ['32px', '140%'],
             'heading-h4': ['24px', '140%'],
+            'heading-h5': ['18px', '140%'],
             xl: ['18px', '180%'],
             md: ['16px', '180%'],
             sm: ['14px', '180%'],
             xs: ['12px', '180%'],
+            xxs: ['9px', '180%'],
         },
         colors: {
             transparent: 'transparent',
@@ -71,7 +73,7 @@ module.exports = {
                 light: '#F6F7F8',
                 alt: '#A5ADB4',
             },
-            texts: {
+            gray: {
                 title: '#202326',
                 normal: '#464C53',
                 light: '#68737D',
