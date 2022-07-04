@@ -1,7 +1,17 @@
 {
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
+    "/img/customers-aktechnical.png": "/img/customers-aktechnical.png",
+    "/img/customers-aremisse.png": "/img/customers-aremisse.png",
+    "/img/customers-corpmarles.png": "/img/customers-corpmarles.png",
+    "/img/customers-elricostore.png": "/img/customers-elricostore.png",
+    "/img/customers-expresartemejor.png": "/img/customers-expresartemejor.png",
+    "/img/customers-ingymec.png": "/img/customers-ingymec.png",
+    "/img/customers-interconnecta.png": "/img/customers-interconnecta.png",
     "/img/diter-aboutme.png": "/img/diter-aboutme.png",
     "/img/diter-main-banner.png": "/img/diter-main-banner.png",
-    "/img/diter-terrones-isotipo.svg": "/img/diter-terrones-isotipo.svg"
+    "/img/diter-terrones-isotipo.svg": "/img/diter-terrones-isotipo.svg",
+    "/img/service-web-applications.png": "/img/service-web-applications.png",
+    "/img/service-web-design.png": "/img/service-web-design.png",
+    "/img/service-web-development.png": "/img/service-web-development.png"
 }

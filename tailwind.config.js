@@ -25,6 +25,10 @@ module.exports = {
             xs: ['12px', '180%'],
             xxs: ['9px', '180%'],
         },
+        borderRadius: {
+            'lg': '32px',
+            'full': '9999px'
+        },
         colors: {
             transparent: 'transparent',
             current: 'currentColor',
