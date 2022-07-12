@@ -70,7 +70,7 @@
                 Uno lo mejor de los dos mundos: el <span class="font-bold">diseño y desarrollo de soluciones web <span class="font-bold text-blue-500">efectivas</span></span>.
             </p>
         </div>
-        <div class="card-service mb-12 py-12 px-10 mx-4 bg-gradient-to-r from-black-400 to-black-500 rounded-lg">
+        <div class="card-service mb-8 py-12 px-10 mx-4 bg-gradient-to-r from-black-400 to-black-500 rounded-lg">
             <div class="grid grid-cols-1 grid-rows-1">
                 <div class="card-service-body text-center">
                     <h2 class="font-heading text-heading-h4 font-black mb-9 text-white">Diseño Web</h2>
@@ -131,7 +131,7 @@
             </div>
         </div>
     </section>
-    <section class="projects-banner container mx-auto py-14 px-4 bg-white">
+    <section class="customers-banner container mx-auto py-14 px-4 bg-white">
         <div class="grid grid-cols-1 grid-rows-1 text-center mb-6">
             <h2 class="font-heading text-heading-h3 text-gray-title font-black mb-4">
                 Mi <span class="text-blue-500">trabajo</span>
@@ -222,74 +222,155 @@
                     @break
                 @default
             @endswitch
-            {{-- <div class="card-customer bg-gradient-to-r from-black-400 to-black-500 rounded-lg relative mb-12 mx-4 py-10 px-4">
-                <div class="grid grid-cols-1 grid-rows-1">
-                    <div class="card-customer-body text-center">
-                        <h2 class="font-heading text-heading-h4 font-black text-white mb-9">
-                            {{ $customer['name'] }}
-                        </h2>
-                        <p class="text-md text-white/75 mb-8">
-                            {{ $customer['description'] }}
-                        </p>
-                        <div class="card-badges">
-                            @foreach ($customer['badges'] as $badge)
-                                <span class="badge text-sm text-black-400 bg-yellow-100 rounded-full py-[2px] px-2 mr-2">
-                                    {{ $badge }}
-                                </span>
-                            @endforeach
-                        </div>
-                        <div class="card-buttons absolute bottom-8 left-0 w-full">
-                            <a href="{{ $customer['link_web'] }}" class="bg-yellow-300 text-black-500 font-heading font-bold rounded-full mx-auto mr-2 py-2 px-4">
-                                Visitar Sitio >
-                            </a>
-                            <a href="#" class="font-heading text-black-100 bg-transparent rounded-full border border-text-100 mx-auto py-2 px-4">
-                                Ver proceso
-                            </a>
-                        </div>
-                    </div>
-                    <div class="card-customer-cover mt-12 mb-12">
-                        <img 
-                            src="{{ asset($customer['cover']) }}"
-                            alt="{{ $customer['name'] }}"  
-                            class="customer-cover-img mx-auto"
-                        >
-                    </div>
-                </div>
-            </div> --}}
         @endforeach
-        {{-- <div class="card-customer bg-gradient-to-r from-black-400 to-black-500 rounded-lg relative mb-12 mx-4 py-10 px-4">
-            <div class="grid grid-cols-1 grid-rows-1">
-                <div class="card-customer-body text-center">
-                    <h2 class="font-heading text-heading-h4 font-black text-white mb-9">
-                        ExpresArte Mejor
-                    </h2>
-                    <p class="text-md text-white/75 mb-8">
-                        Diseño y construcción de plataforma web orientado a cursos de oratoria, locución, blog y eventos.
+    </section>
+    <section class="testimonials-banner container mx-auto py-14 px-4">
+        <div class="grid grid-cols-1 grid-rows-1 text-center mb-6">
+            <h2 class="font-heading text-heading-h3 text-gray-title font-black mb-4">
+                ¿Qué dicen de mis <span class="text-blue-500">resultados</span>?
+            </h2>
+            <p class="text-gray-normal text-md mb-6">
+                Cada vez, son más personas las que confían en mis <span class="font-bold">resultados y trabajo</span>.
+                Anímate y vamos a construir algo grande <span class="font-bold text-blue-500">¡Juntos!</span>
+            </p>
+        </div>
+        <div class="testimonials-container overflow-x-auto no-scrollbar flex items-center">
+            <div class="testimonial-item flex-none mb-12 first:ml-6 last:mr-6 mr-6 w-11/12">
+                <div class="testimonial-item-body text-center bg-white rounded-lg py-8 px-8 mb-6">
+                    <p class="text-md mb-9 text-gray-normal">
+                        Estamos realmente contentos de contar con los servicios profesionales de Diter. Desde la funcionalidad, el asesoramiento y las soluciones precisas en el tiempo, los servicios prestados por Diter son excelentes y el trato es muy cercano.
                     </p>
-                    <div class="card-badges">
-                        <span class="badge text-sm text-black-400 bg-yellow-100 rounded-full py-[2px] px-2 mr-2">Wordpress</span>
-                        <span class="badge text-sm text-black-400 bg-yellow-100 rounded-full py-[2px] px-2 mr-2">Elementor</span>
-                        <span class="badge text-sm text-black-400 bg-yellow-100 rounded-full py-[2px] px-2">Diseño Web</span>
-                    </div>
-                    <div class="card-buttons absolute bottom-8 left-0 w-full">
-                        <a href="#" class="bg-yellow-300 text-black-500 font-heading font-bold rounded-full mx-auto mr-2 py-2 px-4">
-                            Visitar Sitio >
-                        </a>
-                        <a href="#" class="font-heading text-black-100 bg-transparent rounded-full border border-text-100 mx-auto py-2 px-4">
-                            Ver proceso
-                        </a>
-                    </div>
                 </div>
-                <div class="card-customer-cover mt-12 mb-12">
+                <div class="testimonial-item-owner -mt-20">
                     <img 
-                        src="{{ asset('img/customers-expresartemejor.png') }}"
-                        alt="ExpresArte Mejor"  
-                        class="customer-cover-img mx-auto"
+                        src="{{ asset('img/testimonial-expresartemejor.png') }}"
+                        alt="Jesús Morales - Expresarte Mejor"  
+                        class="testimonial-cover-img mx-auto"
                     >
+                    <h1 class="text-md font-bold text-center text-gray-title">Jesús Morales</h1>
+                    <p class="text-xs text-center text-gray-light">CEO de ExpresArte Mejor</p>
                 </div>
             </div>
-        </div> --}}
+            <div class="testimonial-item flex-none mb-12 first:ml-6 last:mr-6 mr-6 w-11/12">
+                <div class="testimonial-item-body text-center bg-white rounded-lg py-8 px-8 mb-6">
+                    <p class="text-md mb-9 text-gray-normal">
+                        Todo el proceso de creación de la web fue super rapido y  de manera eficaz. Te ayudan y asesoran en todo el proceso y posterior a la entrega de la web. Realmente recomendables 100% y super confiables
+                    </p>
+                </div>
+                <div class="testimonial-item-owner -mt-20">
+                    <img 
+                        src="{{ asset('img/testimonial-elricostore.png') }}"
+                        alt="Jesús Morales - Expresarte Mejor"  
+                        class="testimonial-cover-img mx-auto"
+                    >
+                    <h1 class="text-md font-bold text-center text-gray-title">Sarita Pariño</h1>
+                    <p class="text-xs text-center text-gray-light">CEO de El Rico Store</p>
+                </div>
+            </div>
+            <div class="testimonial-item flex-none mb-12 first:ml-6 last:mr-6 mr-6 w-11/12">
+                <div class="testimonial-item-body text-center bg-white rounded-lg py-8 px-8 mb-6">
+                    <p class="text-md mb-9 text-gray-normal">
+                        Super recomendado, cumplió la expectativa de A & K Technical Solution's SAC, aportó ideas adicionales que lograron dar a conocer a los clientes los productos y servicios que  brindamos, contento con los resultados obtenidos.
+                    </p>
+                </div>
+                <div class="testimonial-item-owner -mt-20">
+                    <img 
+                        src="{{ asset('img/testimonial-aktechnical.png') }}"
+                        alt="Jesús Morales - Expresarte Mejor"  
+                        class="testimonial-cover-img mx-auto"
+                    >
+                    <h1 class="text-md font-bold text-center text-gray-title">Arturo Ramirez</h1>
+                    <p class="text-xs text-center text-gray-light">Gerente de AK Tech. Solutions</p>
+                </div>
+            </div>
+            <div class="testimonial-item flex-none mb-12 first:ml-6 last:mr-6 mr-6 w-11/12">
+                <div class="testimonial-item-body text-center bg-white rounded-lg py-8 px-8 mb-6">
+                    <p class="text-md mb-9 text-gray-normal">
+                        Gracias por la rapidez y eficiencia en la creación de nuestra página web https://aremisse.com/, la cual ha quedado lista antes de tiempo y mucho mejor de lo que nos esperábamos!!
+                    </p>
+                </div>
+                <div class="testimonial-item-owner -mt-20">
+                    <img 
+                        src="{{ asset('img/testimonial-aremisse.png') }}"
+                        alt="Jesús Morales - Expresarte Mejor"  
+                        class="testimonial-cover-img mx-auto"
+                    >
+                    <h1 class="text-md font-bold text-center text-gray-title">Solange Del Río</h1>
+                    <p class="text-xs text-center text-gray-light">CEO de Aremisse Lima</p>
+                </div>
+            </div>
+        </div>
     </section>
+    <section class="contact-banner container mx-auto py-14 px-4 bg-white">
+        <div class="grid grid-cols-1 grid-rows-1 text-center mb-6">
+            <h2 class="font-heading text-heading-h3 text-gray-title font-black mb-4">
+                Nos caemos bien <br> <span class="text-blue-500">Conversemos</span>
+            </h2>
+            <p class="text-gray-normal text-md mb-6">
+                Vamos directo al grano y <span class="font-bold text-blue-500">¡trabajemos juntos!</span>
+                <span class="font-bold">Escríbeme un DM</span> y reunámonos para pasar a la acción y <span class="font-bold">construyamos lo que tienes en mente.</span>
+            </p>
+        </div>
+        <div class="grid grid-cols-2 grid-rows-2 mb-8">
+            <div class="self-center text-center mb-8">
+                <img 
+                    class="mx-auto mb-3"
+                    src="{{ asset('img/rrss-logo-linkedin.png') }}"
+                    alt="Logo LinkedIn"
+                >
+                <a 
+                    href="https://www.linkedin.com/in/diter-terrones/"
+                    target="_blank"
+                    class="font-body text-gray-normal text-md underline mb-3"
+                    >
+                    /in/diter-terrones
+                </a>
+            </div>
+            <div class="self-center text-center mb-8">
+                <img 
+                    class="mx-auto mb-3"
+                    src="{{ asset('img/rrss-logo-facebook.png') }}"
+                    alt="Logo Facebook"
+                >
+                <a 
+                    href="https://facebook.com/diter.terrones"
+                    target="_blank"
+                    class="font-body text-gray-normal text-md underline mb-3"
+                    >
+                    /diter.terrones
+                </a>
+            </div>
+            <div class="self-center text-center mb-8">
+                <img 
+                    class="mx-auto mb-3"
+                    src="{{ asset('img/rrss-logo-twitter.png') }}"
+                    alt="Logo Twitter"
+                >
+                <a 
+                    href="https://twitter.com/diter_terrones"
+                    target="_blank"
+                    class="font-body text-gray-normal text-md underline mb-3"
+                    >
+                    @diter_terrones
+                </a>
+            </div>
+            <div class="self-center text-center mb-8">
+                <img 
+                    class="mx-auto mb-3"
+                    src="{{ asset('img/rrss-logo-instagram.png') }}"
+                    alt="Logo Instagram"
+                >
+                <a 
+                    href="https://instagram.com/diter.terrones/"
+                    target="_blank"
+                    class="font-body text-gray-normal text-md underline mb-3"
+                    >
+                    @diter.terrones
+                </a>
+            </div>
+        </div>
+    </section>
+
     {{-- <nav class="nav sticky top-5 z-10 w-2/3 mx-auto bg-white rounded-full text-xl font-bold font-heading">
         <ul class="flex items-center justify-evenly h-[80px] space-x-2 py-3">
             <li class="nav-item">
