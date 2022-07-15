@@ -26,6 +26,7 @@ module.exports = {
             xxs: ['9px', '180%'],
         },
         borderRadius: {
+            'md': '8px',
             'lg': '32px',
             'full': '9999px'
         },

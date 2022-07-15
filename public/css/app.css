@@ -479,6 +479,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .left-0 {
   left: 0px;
 }
+.bottom-0 {
+  bottom: 0px;
+}
 .z-10 {
   z-index: 10;
 }
@@ -492,6 +495,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mx-4 {
   margin-left: 1rem;
   margin-right: 1rem;
+}
+.mx-8 {
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 .mb-8 {
   margin-bottom: 2rem;
@@ -547,13 +554,16 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-auto {
   height: auto;
 }
+.h-\[40px\] {
+  height: 40px;
+}
 .w-fit {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
-.w-4\/5 {
-  width: 80%;
+.w-11\/12 {
+  width: 91.666667%;
 }
 .w-2\/3 {
   width: 66.666667%;
@@ -567,14 +577,17 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-full {
   width: 100%;
 }
-.w-11\/12 {
-  width: 91.666667%;
-}
-.w-\[90\%\] {
-  width: 90%;
-}
 .flex-none {
   flex: none;
+}
+.flex-grow {
+  flex-grow: 1;
+}
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.list-disc {
+  list-style-type: disc;
 }
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -587,6 +600,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .grid-rows-2 {
   grid-template-rows: repeat(2, minmax(0, 1fr));
+}
+.grid-rows-3 {
+  grid-template-rows: repeat(3, minmax(0, 1fr));
 }
 .items-center {
   align-items: center;
@@ -613,6 +629,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .rounded-lg {
   border-radius: 32px;
+}
+.rounded-md {
+  border-radius: 8px;
 }
 .border {
   border-width: 1px;
@@ -667,6 +686,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-yellow-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(255 227 64 / var(--tw-bg-opacity));
+}
+.bg-black-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(32 35 38 / var(--tw-bg-opacity));
+}
+.bg-black-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(57 63 68 / var(--tw-bg-opacity));
 }
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
@@ -857,6 +884,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-blue-100 {
   --tw-text-opacity: 1;
   color: rgb(228 231 255 / var(--tw-text-opacity));
+}
+.text-black-50 {
+  --tw-text-opacity: 1;
+  color: rgb(244 245 246 / var(--tw-text-opacity));
 }
 .underline {
   -webkit-text-decoration-line: underline;
