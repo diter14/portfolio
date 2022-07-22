@@ -8,15 +8,18 @@
  
 @section('content')
 
-    <section class="home-banner container mx-auto">
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 grid-rows-1 mb-8">
-            <div class="self-center text-center">
-                <h2 class="font-heading text-xl">¡Hola! Soy</h2>
-                <h1 class="font-heading text-heading-h2 text-gray-title font-black">DITER <br> TERRONES</h1>
+    <section class="home-banner container mx-auto flex md:block justify-center h-screen md:h-auto -mt-[90px] md:mt-0">
+        <div class="grid grid-cols-1 md:grid-cols-2 content-center mb-8">
+            <div class="self-center text-center md:text-left mb-6">
+                <h2 class="font-heading text-xl md:text-heading-h4">
+                    ¡Hola! Soy
+                </h2>
+                <h1 class="font-heading text-heading-h2 md:text-2xl text-gray-title font-black">
+                    DITER <br> TERRONES
+                </h1>
             </div>
-            <div class="self-center text-center">
-                <p class="font-heading text-blue-400 text-md font-black mb-3">
+            <div class="self-center text-center md:text-right">
+                <p class="font-heading text-blue-400 text-md md:text-heading-h4 font-black mb-3">
                     Diseñador Web & <br> Vue Frontend Developer
                 </p>
                 <p class="font-body text-md">
@@ -24,7 +27,7 @@
                 </p>
             </div>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-1 grid-rows-1">
+        <div class="hidden md:grid grid-cols-1 grid-rows-1 -mt-[150px]">
             <div class="img-container">
                 <img 
                     src="{{ asset('img/diter-main-banner.png') }}" 

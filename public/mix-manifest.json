@@ -1,6 +1,7 @@
 {
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
+    "/img/banner-diter-profile-mobile-min.png": "/img/banner-diter-profile-mobile-min.png",
     "/img/customers-aktechnical.png": "/img/customers-aktechnical.png",
     "/img/customers-aremisse.png": "/img/customers-aremisse.png",
     "/img/customers-corpmarles.png": "/img/customers-corpmarles.png",
@@ -9,6 +10,7 @@
     "/img/customers-ingymec.png": "/img/customers-ingymec.png",
     "/img/customers-interconnecta.png": "/img/customers-interconnecta.png",
     "/img/diter-aboutme.png": "/img/diter-aboutme.png",
+    "/img/diter-main-banner-mobile.png": "/img/diter-main-banner-mobile.png",
     "/img/diter-main-banner.png": "/img/diter-main-banner.png",
     "/img/diter-terrones-favicon-32.png": "/img/diter-terrones-favicon-32.png",
     "/img/diter-terrones-isotipo.svg": "/img/diter-terrones-isotipo.svg",
@@ -25,5 +27,9 @@
     "/img/testimonial-aktechnical.png": "/img/testimonial-aktechnical.png",
     "/img/testimonial-aremisse.png": "/img/testimonial-aremisse.png",
     "/img/testimonial-elricostore.png": "/img/testimonial-elricostore.png",
-    "/img/testimonial-expresartemejor.png": "/img/testimonial-expresartemejor.png"
+    "/img/testimonial-expresartemejor.png": "/img/testimonial-expresartemejor.png",
+    "/img/testimonials-aktechnical.png": "/img/testimonials-aktechnical.png",
+    "/img/testimonials-aremisse.png": "/img/testimonials-aremisse.png",
+    "/img/testimonials-elricostore.png": "/img/testimonials-elricostore.png",
+    "/img/banner-diter-profile-min.png": "/img/banner-diter-profile-min.png"
 }
