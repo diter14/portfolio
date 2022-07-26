@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'DM Sans', sans-serif;
+}
+
+* {
+    color: #464C53;
+}
+
+/* @layer utilities {
+    @variants responsive {
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+  
+      .no-scrollbar {
+        -ms-overflow-style: none; 
+        scrollbar-width: none; 
+      }
+    }
+} */
