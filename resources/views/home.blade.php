@@ -76,12 +76,12 @@
             </h2>
             <p class="text-gray-normal text-md mb-6">
                 Tengo alma de <span class="font-bold">designer</span> y experiencia de <span class="font-bold">developer</span>. <br>
-                Uno lo mejor de los dos mundos: el <span class="font-bold">diseño y desarrollo de soluciones web <span class="font-bold text-blue-500">efectivas</span></span>.
+                Junto lo mejor de los dos mundos: el <span class="font-bold">diseño y desarrollo de soluciones web <span class="font-bold text-blue-500">efectivas</span></span>.
             </p>
         </div>
         @include('components.service-card.service-yellow', ['theme' => 'light'])
-        @include('components.service-card.service-black', ['theme' => 'light'])
         @include('components.service-card.service-blue', ['theme' => 'light'])
+        @include('components.service-card.service-black', ['theme' => 'light'])
     </section>
     <section class="customers-banner container-2xl mx-auto py-14 px-4 bg-white">
         <div class="grid grid-cols-1 grid-rows-1 text-center mb-6">
@@ -182,7 +182,7 @@
                 ¿Qué dicen de mis <span class="text-blue-500">resultados</span>?
             </h2>
             <p class="text-gray-normal text-md mb-6">
-                Cada vez, son más personas las que confían en mis <span class="font-bold">resultados y trabajo</span>.
+                Cada vez, son más personas las que confían en mis <span class="font-bold">resultados y trabajo</span>. <br>
                 Anímate y vamos a construir algo grande <span class="font-bold text-blue-500">¡Juntos!</span>
             </p>
         </div>
@@ -253,72 +253,74 @@
             </div>
         </div>
     </section>
-    <section class="contact-banner container-2xl mx-auto py-14 px-4 bg-white">
-        <div class="grid grid-cols-1 grid-rows-1 text-center mb-6">
-            <h2 class="font-heading text-heading-h3 text-gray-title font-black mb-4">
-                Nos caemos bien <br> <span class="text-blue-500">Conversemos</span>
-            </h2>
-            <p class="text-gray-normal text-md mb-6">
-                Vamos directo al grano y <span class="font-bold text-blue-500">¡trabajemos juntos!</span>
-                <span class="font-bold">Escríbeme un DM</span> y reunámonos para pasar a la acción y <span class="font-bold">construyamos lo que tienes en mente.</span>
-            </p>
-        </div>
-        <div class="grid grid-cols-2 grid-rows-2 mb-8">
-            <div class="self-center text-center mb-8">
-                <img 
-                    class="mx-auto mb-3"
-                    src="{{ asset('img/rrss-logo-linkedin.png') }}"
-                    alt="Logo LinkedIn"
-                >
-                <a 
-                    href="https://www.linkedin.com/in/diter-terrones/"
-                    target="_blank"
-                    class="font-body text-gray-normal text-md underline mb-3"
-                    >
-                    /in/diter-terrones
-                </a>
+    <section class="contact-banner container-2xl mx-auto py-14 md:py-20 px-4 bg-white">
+        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-12">
+            <div class="md:col-span-5 grid grid-cols-1 grid-rows-1 text-center md:text-left mb-6 md:mb-0">
+                <h2 class="font-heading text-heading-h3 md:text-heading-h2 text-gray-title font-black mb-4">
+                    Nos caemos bien 😃 <br> <span class="text-blue-500">Conversemos</span>
+                </h2>
+                <p class="text-gray-normal text-md mb-6 md:mb-0">
+                    Vamos directo al grano y <span class="font-bold text-blue-500">¡trabajemos juntos!</span> <br>
+                    <span class="font-bold">Escríbeme un DM</span> y reunámonos para pasar a la acción y <span class="font-bold">construyamos lo que tienes en mente.</span>
+                </p>
             </div>
-            <div class="self-center text-center mb-8">
-                <img 
-                    class="mx-auto mb-3"
-                    src="{{ asset('img/rrss-logo-facebook.png') }}"
-                    alt="Logo Facebook"
-                >
-                <a 
-                    href="https://facebook.com/diter.terrones"
-                    target="_blank"
-                    class="font-body text-gray-normal text-md underline mb-3"
+            <div class="md:col-span-6 md:col-start-7 grid grid-cols-2 md:grid-cols-4 grid-rows-2 md:grid-rows-1 mb-8 md:mb-0">
+                <div class="self-center text-center mb-8 md:mb-0">
+                    <img 
+                        class="mx-auto mb-3"
+                        src="{{ asset('img/rrss-logo-linkedin.png') }}"
+                        alt="Logo LinkedIn"
                     >
-                    /diter.terrones
-                </a>
-            </div>
-            <div class="self-center text-center mb-8">
-                <img 
-                    class="mx-auto mb-3"
-                    src="{{ asset('img/rrss-logo-twitter.png') }}"
-                    alt="Logo Twitter"
-                >
-                <a 
-                    href="https://twitter.com/diter_terrones"
-                    target="_blank"
-                    class="font-body text-gray-normal text-md underline mb-3"
+                    <a 
+                        href="https://www.linkedin.com/in/diter-terrones/"
+                        target="_blank"
+                        class="font-body text-gray-normal text-sm underline mb-3 md:mb-0"
+                        >
+                        /in/diter-terrones
+                    </a>
+                </div>
+                <div class="self-center text-center mb-8 md:mb-0">
+                    <img 
+                        class="mx-auto mb-3"
+                        src="{{ asset('img/rrss-logo-facebook.png') }}"
+                        alt="Logo Facebook"
                     >
-                    @diter_terrones
-                </a>
-            </div>
-            <div class="self-center text-center mb-8">
-                <img 
-                    class="mx-auto mb-3"
-                    src="{{ asset('img/rrss-logo-instagram.png') }}"
-                    alt="Logo Instagram"
-                >
-                <a 
-                    href="https://instagram.com/diter.terrones/"
-                    target="_blank"
-                    class="font-body text-gray-normal text-md underline mb-3"
+                    <a 
+                        href="https://facebook.com/diter.terrones"
+                        target="_blank"
+                        class="font-body text-gray-normal text-sm underline mb-3 md:mb-0"
+                        >
+                        /diter.terrones
+                    </a>
+                </div>
+                <div class="self-center text-center mb-8 md:mb-0">
+                    <img 
+                        class="mx-auto mb-3"
+                        src="{{ asset('img/rrss-logo-twitter.png') }}"
+                        alt="Logo Twitter"
                     >
-                    @diter.terrones
-                </a>
+                    <a 
+                        href="https://twitter.com/diter_terrones"
+                        target="_blank"
+                        class="font-body text-gray-normal text-sm underline mb-3 md:mb-0"
+                        >
+                        /@diter_terrones
+                    </a>
+                </div>
+                <div class="self-center text-center mb-8 md:mb-0">
+                    <img 
+                        class="mx-auto mb-3"
+                        src="{{ asset('img/rrss-logo-instagram.png') }}"
+                        alt="Logo Instagram"
+                    >
+                    <a 
+                        href="https://instagram.com/diter.terrones/"
+                        target="_blank"
+                        class="font-body text-gray-normal text-sm underline mb-3 md:mb-0"
+                        >
+                        /@diter.terrones
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -354,7 +356,7 @@
             </p>
         </div>
         <div class="grid grid-cols-1 mb-8">
-            <ul class="list-disc mx-8">
+            <ul class="list-disc mx-8 md:mx-auto">
                 <li class="text-white mb-6">
                     Gané un reto de lectura en el 2020, en esa oportunidad resumí el extraordinario libro <span class="font-bold text-white">"Empieza con el Por Qué"</span>, mira <a href="https://www.youtube.com/watch?v=sPOwmkIa6Bw&t=1275s" class="text-yellow-500">el video aquí</a>
                 </li>

@@ -1,8 +1,8 @@
 @if ($theme == 'light')
-    <div class="card-service mb-12 py-12 px-10 mx-4 bg-white rounded-lg">
-        <div class="grid grid-cols-1 grid-rows-1">
-            <div class="card-service-body text-center">
-                <h2 class="font-heading font-black text-heading-h4 text-gray-title mb-9">Diseño Web</h2>
+    <div class="card-service md:max-w-[960px] mb-12 py-12 px-10 md:py-10 md:px-8 mx-4 md:mx-auto bg-white rounded-lg">
+        <div class="grid grid-cols-1 md:grid-cols-12 grid-rows-1">
+            <div class="card-service-body col-span-8 text-center md:text-left">
+                <h2 class="font-heading font-black text-heading-h4 md:text-heading-h3 text-gray-title mb-9">Diseño Web</h2>
                 <p class="text-md text-gray-normal mb-9">
                     Investigación y diseño las interfaces de usuario (ui) para tu sitio o aplicación web. Wireframes, Mockups y prototipado.
                 </p>
@@ -10,11 +10,11 @@
                     Diseña mi web >
                 </a>
             </div>
-            <div class="card-service-cover mt-12">
+            <div class="card-service-cover col-span-4 mt-12 md:mt-0">
                 <img 
                     src="{{ asset('img/service-web-design.png') }}"
-                    alt="Diter About Me"  
-                    class="service-cover-img mx-auto"
+                    alt="Servicio-Web-Design"  
+                    class="service-cover-img mx-auto md:mr-3"
                 >
             </div>
         </div>
