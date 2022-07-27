@@ -10,7 +10,11 @@
     color: #464C53;
 }
 
-/* @layer utilities {
+html {
+  scroll-behavior: smooth;
+}
+
+@layer utilities {
     @variants responsive {
       .no-scrollbar::-webkit-scrollbar {
         display: none;
@@ -21,4 +25,4 @@
         scrollbar-width: none; 
       }
     }
-} */
+}

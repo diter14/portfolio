@@ -1,7 +1,7 @@
 <div class="card-customer md:max-w-5xl bg-gradient-to-r from-black-400 to-black-700 rounded-lg relative mb-12 mx-4 md:mx-auto py-10 md:py-8 px-4 md:px-8">
     <div class="grid grid-cols-1 md:grid-cols-12 grid-rows-1">
         <div class="card-customer-body md:col-span-7 text-center md:text-left">
-            <h2 class="font-heading text-heading-h4 md:text-heading-h3 font-black text-white mb-9 md:mb-6">
+            <h2 class="font-heading text-heading-h4 font-black text-white mb-9 md:mb-6">
                 {{ $customer['name'] }}
             </h2>
             <p class="text-md text-white/75 mb-8 md:mb-6">
