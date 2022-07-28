@@ -1,0 +1,12 @@
+
+@font-face {
+    font-family: 'DM Sans', sans-serif;
+}
+
+* {
+    color: theme('colors.gray.normal');
+}
+
+html {
+  scroll-behavior: smooth;
+}

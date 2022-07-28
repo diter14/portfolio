@@ -1,0 +1,12 @@
+.card-customer:hover .customer-cover-img {
+    width: 500px;
+    transition: all 400ms;
+}
+
+.nav-item__link {
+    color: theme('colors.white');
+}
+
+.nav-item__link.active {
+    color: theme('colors.yellow.500');
+}

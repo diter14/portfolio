@@ -27,32 +27,50 @@
             </div>
         </div>
         <div class="hidden md:grid grid-cols-1 grid-rows-1 -mt-[150px]">
-            <div class="img-container">
+            <div class="img-container relative">
                 <img 
                     src="{{ asset('img/diter-main-banner.png') }}" 
                     alt="Diter Main Cover" 
                     class="banner-cover mx-auto"
                 >
+                <img 
+                    src="{{ asset('img/diter-main-banner-thunder.png') }}" 
+                    alt="Diter Main Thunder" 
+                    class="floating absolute top-0 left-0 right-0 mx-auto"
+                >
+                <img 
+                    src="{{ asset('img/diter-main-banner-click.png') }}" 
+                    alt="Diter Main Click" 
+                    class="floating animation-delay-1 absolute top-0 left-0 right-0 mx-auto"
+                >
             </div>
         </div>
     </section>
-    <nav class="hidden md:block nav sticky top-5 z-[100] w-2/3 bg-white shadow-lg shadow-black-200/40 rounded-full font-bold font-heading mx-auto -mt-[64px] mb-[32px]">
+    <nav class="hidden md:block nav sticky top-5 z-[100] w-2/3 bg-black-500 shadow-main-menu shadow-black-200/40 rounded-full font-bold font-heading mx-auto -mt-[64px] mb-[32px]">
         <ul class="flex items-center justify-evenly text-xl h-[80px] space-x-2 py-3">
             <li class="nav-item">
-                <a href="#about-banner" class="nav-item__link">Sobre mí</a>
+                <a href="#about-banner" class="nav-item__link">
+                    Sobre mí
+                </a>
             </li>
             <li class="nav-item">
-                <a href="#services-banner" class="nav-item__link">Qué hago bien</a>
+                <a href="#services-banner" class="nav-item__link">
+                    Qué hago bien
+                </a>
             </li>
             <li class="nav-item">
-                <a href="#customers-banner" class="nav-item__link">Clientes</a>
+                <a href="#customers-banner" class="nav-item__link">
+                    Clientes
+                </a>
             </li>
             <li class="nav-item">
-                <a href="#contact-banner" class="nav-item__link"><span class="text-blue-500">¡Hablemos!</span></a>
+                <a href="#testimonials-banner" class="nav-item__link">
+                    Resultados
+                </a>
             </li>
         </ul>
     </nav>
-    <section id="about-banner" class="about-banner py-14 px-4 bg-white">
+    <section id="about-banner" class="about-banner py-14 md:py-36 px-4 bg-white">
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 grid-rows-1 text-center md:text-left mb-6 md:mb-10">
             <h2 class="font-heading text-heading-h3 md:text-heading-h2 text-gray-title font-black mb-4">
                 Sobre <span class="text-blue-500">mí</span>
@@ -84,7 +102,7 @@
             </div>
         </div>
     </section>
-    <section id="services-banner" class="services-banner container-2xl mx-auto py-14 px-4">
+    <section id="services-banner" class="services-banner container-2xl mx-auto py-14 md:py-36 px-4">
         <div class="grid grid-cols-1 grid-rows-1 text-center mb-6">
             <h2 class="font-heading text-heading-h3 md:text-heading-h2 text-gray-title font-black mb-4">
                 ¿Qué <span class="text-blue-500">hago</span> bien?
@@ -98,7 +116,7 @@
         @include('components.service-card.service-blue', ['theme' => 'light'])
         @include('components.service-card.service-black', ['theme' => 'light'])
     </section>
-    <section id="customers-banner" class="customers-banner container-2xl mx-auto py-14 px-4 bg-white">
+    <section id="customers-banner" class="customers-banner container-2xl mx-auto py-14 md:py-36 px-4">
         <div class="grid grid-cols-1 grid-rows-1 text-center mb-6">
             <h2 class="font-heading text-heading-h3 text-gray-title font-black mb-4">
                 Mi <span class="text-blue-500">trabajo</span>
@@ -178,19 +196,19 @@
         @foreach ($customers as $customer)
             @switch($customer['theme-color'])
                 @case('black')
-                    @include('components.customer-card.customer-black')
+                    @include('components.customer-card.customer-black', ['theme' => 'light'])
                     @break
                 @case('yellow')
-                    @include('components.customer-card.customer-yellow')
+                    @include('components.customer-card.customer-yellow', ['theme' => 'light'])
                     @break
                 @case('blue')
-                    @include('components.customer-card.customer-blue')
+                    @include('components.customer-card.customer-blue', ['theme' => 'light'])
                     @break
                 @default
             @endswitch
         @endforeach
     </section>
-    <section id="testimonials-banner" class="testimonials-banner container-2xl mx-auto py-14 px-4">
+    <section id="testimonials-banner" class="testimonials-banner container-2xl mx-auto py-14 md:py-36 px-4">
         <div class="grid grid-cols-1 grid-rows-1 text-center mb-6">
             <h2 class="font-heading text-heading-h3 text-gray-title font-black mb-4">
                 ¿Qué dicen de mis <span class="text-blue-500">resultados</span>?
@@ -200,7 +218,7 @@
                 Anímate y vamos a construir algo grande <span class="font-bold text-blue-500">¡Juntos!</span>
             </p>
         </div>
-        <div class="testimonials-container overflow-x-auto no-scrollbar flex items-center">
+        <div class="testimonials-container overflow-x-auto scrollbar flex items-center">
             <div class="testimonial-item flex-none mb-12 first:ml-6 last:mr-6 mr-6 w-10/12 md:w-2/5">
                 <div class="testimonial-item-body text-center bg-white rounded-lg py-8 px-8 mb-6">
                     <p class="text-md mb-9 text-gray-normal">
@@ -267,7 +285,7 @@
             </div>
         </div>
     </section>
-    <section id="contact-banner" class="contact-banner mx-auto py-14 md:py-20 px-4 bg-white">
+    <section id="contact-banner" class="contact-banner mx-auto py-14 md:py-36 px-4 bg-white">
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12">
             <div class="md:col-span-5 grid grid-cols-1 grid-rows-1 text-center md:text-left mb-6 md:mb-0">
                 <h2 class="font-heading text-heading-h3 md:text-heading-h2 text-gray-title font-black mb-4">
@@ -338,7 +356,7 @@
             </div>
         </div>
     </section>
-    <section id="rrss-banner" class="rrss-banner mx-auto py-14 px-4">
+    <section id="rrss-banner" class="rrss-banner mx-auto py-14 md:py-36 px-4">
         <div class="max-w-6xl mx-auto grid grid-cols-1 grid-rows-1 text-center mb-6">
             <h2 class="font-heading text-heading-h3 md:text-heading-h2 text-gray-title font-black mb-4">
                 Mis últimas <span class="text-blue-500">creaciones</span>
@@ -397,23 +415,39 @@
         </div>
 
     </section>
-    <nav class="nav sticky bottom-0 z-10 w-full mx-auto bg-black-300 text-xs font-bold font-heading md:hidden">
+    <nav class="nav sticky bottom-0 z-10 w-full mx-auto bg-black-400 text-xs font-bold font-heading md:hidden">
         <ul class="flex items-center justify-evenly h-[40px] space-x-2 py-3">
             <li class="nav-item">
-                <a href="" class="nav-item__link text-black-50">Sobre mí</a>
+                <a href="#about-banner" class="nav-item__link text-black-50">Sobre mí</a>
             </li>
             <li class="nav-item">
-                <a href="" class="nav-item__link text-black-50">Qué hago</a>
+                <a href="#services-banner" class="nav-item__link text-black-50">Qué hago</a>
             </li>
             <li class="nav-item">
-                <a href="" class="nav-item__link text-black-50">Proyectos</a>
+                <a href="#customers-banner" class="nav-item__link text-black-50">Proyectos</a>
             </li>
             <li class="nav-item">
-                <a href="" class="nav-item__link text-black-50">Trabajemos</a>
+                <a href="#testimonials-banner" class="nav-item__link text-black-50">Resultados</a>
             </li>
         </ul>
     </nav>
 @endsection
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', (ed) => {
+        const nav = document.querySelectorAll('.nav-item__link')
+        nav.forEach(function(navItem) {
+            navItem.addEventListener('click', (e) => {
+                const current = document.querySelector('.nav-item__link.active')
+                if (current) {
+                    current.classList.remove('active')
+                }
+                e.target.classList.add('active')
+            })
+        })
+    })
+</script>
 
 @section('footer')
     @parent
