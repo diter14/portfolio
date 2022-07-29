@@ -5,6 +5,7 @@
 
 * {
     color: theme('colors.gray.normal');
+    font-family: 'DM Sans', sans-serif;
 }
 
 html {

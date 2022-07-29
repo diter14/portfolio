@@ -7,7 +7,91 @@
 @endsection
  
 @section('content')
-    <section class="home-banner max-w-6xl mx-auto flex md:block justify-center h-screen md:h-auto -mt-[90px] md:mt-0">
+
+
+@php
+$skills = [
+    'tech' => [
+        [
+            'logo' => 'img/skills-figma.png',
+            'label' => 'Figma'
+        ],
+        [
+            'logo' => 'img/skills-adobexd.png',
+            'label' => 'Adobe Xd'
+        ],
+        [
+            'logo' => 'img/skills-laravel.png',
+            'label' => 'Laravel'
+        ],
+        [
+            'logo' => 'img/skills-php.png',
+            'label' => 'PHP'
+        ],
+        [
+            'logo' => 'img/skills-wordpress.png',
+            'label' => 'Wordpress'
+        ],
+        [
+            'logo' => 'img/skills-html.png',
+            'label' => 'HTML'
+        ],
+        [
+            'logo' => 'img/skills-css.png',
+            'label' => 'CSS'
+        ],
+        [
+            'logo' => 'img/skills-javascript.png',
+            'label' => 'JavaScript'
+        ],
+        [
+            'logo' => 'img/skills-vuejs.png',
+            'label' => 'Vue.js'
+        ],
+        [
+            'logo' => 'img/skills-git.png',
+            'label' => 'Git'
+        ],
+    ],
+    'soft' => [
+        [
+            'logo' => 'img/skills-vibes.png',
+            'label' => 'GoodVibes'
+        ],
+        [
+            'logo' => 'img/skills-disciplined.png',
+            'label' => 'Disciplinado'
+        ],
+        [
+            'logo' => 'img/skills-coworker.png',
+            'label' => 'Empático'
+        ],
+        [
+            'logo' => 'img/skills-focus.png',
+            'label' => 'Enfocado'
+        ],
+        [
+            'logo' => 'img/skills-creative.png',
+            'label' => 'Creativo'
+        ],
+        [
+            'logo' => 'img/skills-openmind.png',
+            'label' => 'Open Mind'
+        ],
+        [
+            'logo' => 'img/skills-listener.png',
+            'label' => 'Escuchador'
+        ],
+        [
+            'logo' => 'img/skills-communicator.png',
+            'label' => 'Comunicador'
+        ],
+    ]
+]
+@endphp
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" rel="stylesheet" />
+    <section id="main-banner" class="main-banner max-w-6xl mx-auto flex md:block justify-center h-screen md:h-auto -mt-[90px] md:mt-0">
         <div class="grid grid-cols-1 md:grid-cols-2 content-center mb-8">
             <div class="self-center text-center md:text-left mb-6">
                 <h2 class="font-heading text-xl md:text-heading-h4">
@@ -70,10 +154,10 @@
             </li>
         </ul>
     </nav>
-    <section id="about-banner" class="about-banner py-14 md:py-36 px-4 bg-white">
+    <section id="about-banner" class="about-banner py-14 md:pt-36 px-4 bg-white">
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 grid-rows-1 text-center md:text-left mb-6 md:mb-10">
             <h2 class="font-heading text-heading-h3 md:text-heading-h2 text-gray-title font-black mb-4">
-                Sobre <span class="text-blue-500">mí</span>
+                Sobre <span class="font-heading text-blue-500">mí</span>
             </h2>
             <div class="flex items-center justify-end">
                 <a href="#" class="rounded-full bg-yellow-500 text-black-500 py-2 px-4 font-bold w-fit mx-auto md:mx-0">
@@ -84,12 +168,59 @@
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 grid-rows-1 text-center md:text-left">
             <div class="about-copy md:col-span-8 flex flex-col justify-center">
                 <p class="text-gray-normal text-md mb-6">
-                    Soy bachiller en <span class="font-bold">Ingeniería de Sistemas</span>, apasionado por la tecnología y el diseño de interfaces web.
+                    Soy bachiller en <span class="font-bold">Ingeniería de Sistemas</span>, apasionado por la tecnología y el diseño de interfaces web. <br>
                     Cuento con +5 años de experticia como <span class="font-bold">Frontend Developer</span>, ayudo a emprendedores y empresas a tener presencia digital e incrementar el alcance de lo que ofrecen combinando mis habilidades de <span class="font-bold">Diseño UI</span> con la <span class="font-bold">construcción de sitios</span> o aplicaciones web.
+                </p>
+                <p class="text-gray-normal text-md mb-6">
                     Si te gusta mi perfil, <span class="font-bold text-blue-500">¡charlemos!</span>
                 </p>
-                <h3 class="font-heading text-heading-h5 font-bold mb-6">💻 Tech Skills ></h3>
-                <h3 class="font-heading text-heading-h5 font-bold mb-8">🔥 Soft Skills ></h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 mb-8 md:mb-0">
+                    <div class="transition hover:bg-yellow-50 -md:ml-5">
+                        <!-- header -->
+                        <div class="accordion-header cursor-pointer transition flex justify-center md:justify-start space-x-3 px-5 items-center h-16">
+                            <h3 class="font-heading text-heading-h5 font-bold">
+                                <img src="{{ asset('icon/icon-flash.svg') }}" alt="flash" class="inline-block"> Tech Skills
+                            </h3>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                        <!-- Content -->
+                        <div class="accordion-body bg-white px-5 pt-0 overflow-hidden max-h-0">
+                            <div class="flex flex-row flex-wrap">
+                                @foreach ($skills['tech'] as $skill)
+                                    <div class="skills-item px-4 pt-5 pb-3">
+                                        <img src="{{ asset($skill['logo']) }}" alt="{{ $skill['label'] }}" class="max-w-[40px] mx-auto">
+                                        <p class="text-xs text-gray-light font-body whitespace-nowrap text-center mt-1">
+                                            {{ $skill['label'] }}
+                                        </p>
+                                    </div>
+                                @endforeach
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="transition hover:bg-blue-50">
+                        <!-- header -->
+                        <div class="accordion-header cursor-pointer transition flex justify-center md:justify-start space-x-3 px-5 items-center h-16">
+                            <h3 class="font-heading text-heading-h5 font-bold">
+                                <img src="{{ asset('icon/icon-fire.svg') }}" alt="flash" class="inline-block"> Soft Skills
+                            </h3>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                        <!-- Content -->
+                        <div class="accordion-body bg-white px-5 pt-0 overflow-hidden max-h-0">
+                            <div class="flex flex-row flex-wrap">
+                                @foreach ($skills['soft'] as $skill)
+                                    <div class="skills-item px-4 pt-5 pb-3">
+                                        <img src="{{ asset($skill['logo']) }}" alt="{{ $skill['label'] }}" class="max-w-[40px] mx-auto">
+                                        <p class="text-xs text-gray-light font-body whitespace-nowrap text-center mt-1">
+                                            {{ $skill['label'] }}
+                                        </p>
+                                    </div>
+                                @endforeach
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="about-cover md:col-span-4">
                 <div class="img-container ">
@@ -102,10 +233,10 @@
             </div>
         </div>
     </section>
-    <section id="services-banner" class="services-banner container-2xl mx-auto py-14 md:py-36 px-4">
+    <section id="services-banner" class="services-banner container-2xl mx-auto py-14 md:pt-36 px-4">
         <div class="grid grid-cols-1 grid-rows-1 text-center mb-6">
             <h2 class="font-heading text-heading-h3 md:text-heading-h2 text-gray-title font-black mb-4">
-                ¿Qué <span class="text-blue-500">hago</span> bien?
+                ¿Qué <span class="font-heading text-blue-500">hago</span> bien?
             </h2>
             <p class="text-gray-normal text-md mb-6">
                 Tengo alma de <span class="font-bold">designer</span> y experiencia de <span class="font-bold">developer</span>. <br>
@@ -116,10 +247,10 @@
         @include('components.service-card.service-blue', ['theme' => 'light'])
         @include('components.service-card.service-black', ['theme' => 'light'])
     </section>
-    <section id="customers-banner" class="customers-banner container-2xl mx-auto py-14 md:py-36 px-4">
+    <section id="customers-banner" class="customers-banner container-2xl mx-auto py-14 md:pt-36 px-4">
         <div class="grid grid-cols-1 grid-rows-1 text-center mb-6">
             <h2 class="font-heading text-heading-h3 text-gray-title font-black mb-4">
-                Mi <span class="text-blue-500">trabajo</span>
+                Mi <span class="font-heading text-blue-500">trabajo</span>
             </h2>
             <p class="text-gray-normal text-md mb-6">
                 Un pequeño recorrido de los proyectos para clientes con los que logramos estos grandes resultados. <br>
@@ -208,17 +339,17 @@
             @endswitch
         @endforeach
     </section>
-    <section id="testimonials-banner" class="testimonials-banner container-2xl mx-auto py-14 md:py-36 px-4">
+    <section id="testimonials-banner" class="testimonials-banner container-2xl mx-auto py-14 md:pt-36 px-4">
         <div class="grid grid-cols-1 grid-rows-1 text-center mb-6">
             <h2 class="font-heading text-heading-h3 text-gray-title font-black mb-4">
-                ¿Qué dicen de mis <span class="text-blue-500">resultados</span>?
+                ¿Qué dicen de mis <span class="font-heading text-blue-500">resultados</span>?
             </h2>
             <p class="text-gray-normal text-md mb-6">
                 Cada vez, son más personas las que confían en mis <span class="font-bold">resultados y trabajo</span>. <br>
                 Anímate y vamos a construir algo grande <span class="font-bold text-blue-500">¡Juntos!</span>
             </p>
         </div>
-        <div class="testimonials-container overflow-x-auto scrollbar flex items-center">
+        <div class="testimonials-container max-w-6xl mx-auto overflow-x-auto scrollbar flex items-center">
             <div class="testimonial-item flex-none mb-12 first:ml-6 last:mr-6 mr-6 w-10/12 md:w-2/5">
                 <div class="testimonial-item-body text-center bg-white rounded-lg py-8 px-8 mb-6">
                     <p class="text-md mb-9 text-gray-normal">
@@ -285,11 +416,11 @@
             </div>
         </div>
     </section>
-    <section id="contact-banner" class="contact-banner mx-auto py-14 md:py-36 px-4 bg-white">
+    <section id="contact-banner" class="contact-banner mx-auto py-14 md:pt-36 px-4 bg-white">
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12">
             <div class="md:col-span-5 grid grid-cols-1 grid-rows-1 text-center md:text-left mb-6 md:mb-0">
                 <h2 class="font-heading text-heading-h3 md:text-heading-h2 text-gray-title font-black mb-4">
-                    Nos caemos bien 😃 <br> <span class="text-blue-500">Conversemos</span>
+                    Nos caemos bien 😃 <br> <span class="font-heading text-blue-500">Conversemos</span>
                 </h2>
                 <p class="text-gray-normal text-md mb-6 md:mb-0">
                     Vamos directo al grano y <span class="font-bold text-blue-500">¡trabajemos juntos!</span> <br>
@@ -356,10 +487,10 @@
             </div>
         </div>
     </section>
-    <section id="rrss-banner" class="rrss-banner mx-auto py-14 md:py-36 px-4">
+    <section id="rrss-banner" class="rrss-banner mx-auto py-14 md:pt-36 px-4">
         <div class="max-w-6xl mx-auto grid grid-cols-1 grid-rows-1 text-center mb-6">
             <h2 class="font-heading text-heading-h3 md:text-heading-h2 text-gray-title font-black mb-4">
-                Mis últimas <span class="text-blue-500">creaciones</span>
+                Mis últimas <span class="font-heading text-blue-500">creaciones</span>
             </h2>
             <p class="text-gray-normal text-md mb-6">
                 Date una vuelta por mis redes creo <span class="font-bold">contenido ameno y cotidiano.</span> <br>
@@ -382,7 +513,7 @@
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 grid-rows-1">
             <div class="text-center md:text-left mb-6 md:mb-0">
                 <h2 class="font-heading text-heading-h3 md:text-heading-h2 text-white font-black mb-4">
-                    ¿Quieres saber? <br> <span class="text-yellow-500">Curiosidades</span>
+                    ¿Quieres saber? <br> <span class="font-heading text-yellow-500">Curiosidades</span>
                 </h2>
                 <img 
                     src="{{ asset('img/diter-curiosity.png') }}"
@@ -415,6 +546,10 @@
         </div>
 
     </section>
+
+<script>
+    
+</script>
     <nav class="nav sticky bottom-0 z-10 w-full mx-auto bg-black-400 text-xs font-bold font-heading md:hidden">
         <ul class="flex items-center justify-evenly h-[40px] space-x-2 py-3">
             <li class="nav-item">
@@ -436,6 +571,7 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', (ed) => {
+        // Active link for Main Navigation Menu
         const nav = document.querySelectorAll('.nav-item__link')
         nav.forEach(function(navItem) {
             navItem.addEventListener('click', (e) => {
@@ -444,6 +580,28 @@
                     current.classList.remove('active')
                 }
                 e.target.classList.add('active')
+            })
+        })
+
+        // Selected tab for accordion
+        const accordionHeader = document.querySelectorAll('.accordion-header')
+        accordionHeader.forEach((header) => {
+            header.addEventListener('click', function () {
+                const accordionContent = header.parentElement.querySelector('.accordion-body')
+                let accordionMaxHeight = accordionContent.style.maxHeight
+
+                // Condition handling
+                if (accordionMaxHeight == '0px' || accordionMaxHeight.length == 0) {
+                    accordionContent.style.maxHeight = `${accordionContent.scrollHeight + 32}px`
+                    header.querySelector('.fa-solid').classList.remove('fa-angle-down')
+                    header.querySelector('.fa-solid').classList.add('fa-angle-up')
+                    header.parentElement.classList.add('bg-blue-50')
+                } else {
+                    accordionContent.style.maxHeight = `0px`
+                    header.querySelector('.fa-solid').classList.add('fa-angle-down')
+                    header.querySelector('.fa-solid').classList.remove('fa-angle-up')
+                    header.parentElement.classList.remove('bg-blue-50')
+                }
             })
         })
     })

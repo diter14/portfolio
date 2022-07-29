@@ -17,3 +17,4 @@ mix.js('resources/js/app.js', 'public/js')
     ]);
 
 mix.copy('resources/assets/images', 'public/img', false);
+mix.copy('resources/assets/icons', 'public/icon', false);
