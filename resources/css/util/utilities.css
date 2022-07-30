@@ -33,7 +33,7 @@
 
 
 .floating {
-    animation-name: floating-globe;
+    animation-name: floating-banner-web;
     animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
@@ -43,9 +43,26 @@
 .floating.animation-delay-1 {
     animation-delay: 0.5s;
 }
+
+
+#main-banner {
+    background-image: url('/img/mobile-background-pattern.png');
+    background-position: 0px 0px;
+    background-repeat: repeat-x;
+    animation: floating-banner-mobile 1.5s ease-in-out infinite alternate;
+}
   
-@keyframes floating-globe {
+@keyframes floating-banner-web {
     100% { transform: translate3D(0,-40px,0); }
+}
+
+@keyframes floating-banner-mobile {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 0 15px;
+    }
 }
 
 

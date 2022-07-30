@@ -87,11 +87,101 @@ $skills = [
             'label' => 'Comunicador'
         ],
     ]
-]
-@endphp
+];
+$customers = [
+    [
+        'name' => 'ExpresArte Mejor',
+        'description' => 'Diseño y construcción de plataforma web orientado a cursos de oratoria, locución, blog y eventos.',
+        'badges' => ['Wordpress', 'Elementor', 'Diseño Web'],
+        'link_web' => 'https://expresartemejor.com',
+        'link_rrss' => 'https://',
+        'cover' => 'img/customers-expresartemejor.png',
+        'theme-color' => 'black',
+    ],
+    [
+        'name' => 'Aremisse Lima',
+        'description' => 'Sitio web corporativo para empresa de transporte de personal, turístico y corporativo.',
+        'badges' => ['Laravel', 'Vue JS', 'Diseño UI'],
+        'link_web' => 'https://aremisselima.com',
+        'link_rrss' => 'https://',
+        'cover' => 'img/customers-aremisse.png',
+        'theme-color' => 'yellow',
+    ],
+    [
+        'name' => 'INGYMEC',
+        'description' => 'Análisis, diseño de arquitectura web y construcción de sitio web corporativo del rubro metal mecánica.',
+        'badges' => ['Wordpress', 'Divi', 'Diseño Web'],
+        'link_web' => 'https://ingymec.com',
+        'link_rrss' => 'https://',
+        'cover' => 'img/customers-ingymec.png',
+        'theme-color' => 'blue',
+    ],
+    [
+        'name' => 'InterConnecta',
+        'description' => 'Construcción de plataforma web personalizada para visualizar métricas y perfiles de empleados.',
+        'badges' => ['Laravel', 'Vue JS', 'Diseño UI'],
+        'link_web' => '#',
+        'link_rrss' => 'https://',
+        'cover' => 'img/customers-interconnecta.png',
+        'theme-color' => 'black',
+    ],
+    [
+        'name' => 'El Rico Store',
+        'description' => 'Construcción y diseño de e-Commerce para empresa de venta de ropa de sector geek 🔥.',
+        'badges' => ['eCommerce', 'Diseño Web', 'Wordpress'],
+        'link_web' => 'https://elricostore.com',
+        'link_rrss' => 'https://',
+        'cover' => 'img/customers-elricostore.png',
+        'theme-color' => 'blue',
+    ],
+    [
+        'name' => 'AK Tech. Solutions',
+        'description' => 'Diseño y construcción de sitio web corporativo de sector de minero e implementación de telemandos.',
+        'badges' => ['Wordpress', 'Elementor', 'Diseño Web'],
+        'link_web' => 'https://aktechnicalsolutions.com',
+        'link_rrss' => 'https://',
+        'cover' => 'img/customers-aktechnical.png',
+        'theme-color' => 'yellow',
+    ],
+    [
+        'name' => 'Corporación Marles',
+        'description' => 'Arquitectura web, diseño y construcción de catálogo virtual para mayoreo de productos de panadería.',
+        'badges' => ['Arquitectura', 'Diseño Web', 'Wordpress'],
+        'link_web' => 'https://corporacionmarles.com',
+        'link_rrss' => 'https://',
+        'cover' => 'img/customers-corpmarles.png',
+        'theme-color' => 'black',
+    ],
+];
+$testimonials = [
+    [
+        'quote' => 'Estamos realmente contentos de contar con los servicios profesionales de Diter. Desde la funcionalidad, el asesoramiento y las soluciones precisas en el tiempo, los servicios prestados por Diter son excelentes y el trato es muy cercano.',
+        'owner_photo' => 'img/testimonial-expresartemejor.png',
+        'owner_name' => 'Jesús Morales',
+        'owner_title' => 'CEO de ExpresArte Mejor',
+    ],
+    [
+        'quote' => 'Todo el proceso de creación de la web fue super rapido y  de manera eficaz. Te ayudan y asesoran en todo el proceso y posterior a la entrega de la web. Realmente recomendables 100% y super confiables.',
+        'owner_photo' => 'img/testimonial-elricostore.png',
+        'owner_name' => 'Sarita Pariño',
+        'owner_title' => 'CEO de El Rico Store',
+    ],
+    [
+        'quote' => 'Gracias por la rapidez y eficiencia en la creación de nuestra página web https://aremisse.com/, la cual ha quedado lista antes de tiempo y mucho mejor de lo que nos esperábamos!!',
+        'owner_photo' => 'img/testimonial-aremisse.png',
+        'owner_name' => 'Solange Del Río',
+        'owner_title' => 'CEO de Aremisse Lima',
+    ],
+    [
+        'quote' => 'Super recomendado, cumplió la expectativa de A & K Technical Solution\'s SAC, aportó ideas adicionales que lograron dar a conocer a los clientes los productos y servicios que  brindamos, contento con los resultados obtenidos.',
+        'owner_photo' => 'img/testimonial-aktechnical.png',
+        'owner_name' => 'Arturo Ramirez',
+        'owner_title' => 'Gerente de AK Tech. Solutions',
+    ],
+];
+@endphp 
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" rel="stylesheet" />
-    <section id="main-banner" class="main-banner max-w-6xl mx-auto flex md:block justify-center h-screen md:h-auto -mt-[90px] md:mt-0">
+    <section id="main-banner" class="main-banner max-w-6xl flex md:block justify-center h-screen md:h-auto mx-auto -mt-[90px] md:mt-0">
         <div class="grid grid-cols-1 md:grid-cols-2 content-center mb-8">
             <div class="self-center text-center md:text-left mb-6">
                 <h2 class="font-heading text-xl md:text-heading-h4">
@@ -103,14 +193,23 @@ $skills = [
             </div>
             <div class="self-center text-center md:text-right">
                 <p class="font-heading text-blue-400 text-md md:text-heading-h4 font-black mb-3">
-                    Diseñador Web & <br> Vue Frontend Developer
+                    Web Designer & <br> Frontend Developer
                 </p>
                 <p class="font-body text-md">
                     Diseño y desarrollo experiencias <span class="font-bold">visualmente <br>atractivas</span> y funcionales en la web
                 </p>
+                <a 
+                    href="#about-banner"
+                    class="md:hidden block mt-6">
+                    <img 
+                        src="{{ asset('icon/icon-arrow-yellow.svg') }}" 
+                        alt="Arrow" 
+                        class="mx-auto"
+                    >
+                </a>
             </div>
         </div>
-        <div class="hidden md:grid grid-cols-1 grid-rows-1 -mt-[150px]">
+        <div class="md:grid grid-cols-1 grid-rows-1 hidden -mt-[150px]">
             <div class="img-container relative">
                 <img 
                     src="{{ asset('img/diter-main-banner.png') }}" 
@@ -160,7 +259,7 @@ $skills = [
                 Sobre <span class="font-heading text-blue-500">mí</span>
             </h2>
             <div class="flex items-center justify-end">
-                <a href="#" class="rounded-full bg-yellow-500 text-black-500 py-2 px-4 font-bold w-fit mx-auto md:mx-0">
+                <a href="https://drive.google.com/file/d/16yQSyxGjjV5T6CR06btOvPWBfczOL1Ng/view?usp=sharing" class="rounded-full bg-yellow-500 text-black-500 py-2 px-4 font-bold w-fit mx-auto md:mx-0">
                     Descarga mi CV
                 </a>
             </div>
@@ -181,7 +280,12 @@ $skills = [
                             <h3 class="font-heading text-heading-h5 font-bold">
                                 <img src="{{ asset('icon/icon-flash.svg') }}" alt="flash" class="inline-block"> Tech Skills
                             </h3>
-                            <i class="fa-solid fa-angle-down"></i>
+                            <img 
+                                src="{{ asset('icon/icon-arrow.svg') }}" 
+                                alt="Arrow" 
+                                class="accordion-selector inline-block mx-auto"
+                            >
+                            {{-- <i class="fa-solid fa-angle-down"></i> --}}
                         </div>
                         <!-- Content -->
                         <div class="accordion-body bg-white px-5 pt-0 overflow-hidden max-h-0">
@@ -204,7 +308,12 @@ $skills = [
                             <h3 class="font-heading text-heading-h5 font-bold">
                                 <img src="{{ asset('icon/icon-fire.svg') }}" alt="flash" class="inline-block"> Soft Skills
                             </h3>
-                            <i class="fa-solid fa-angle-down"></i>
+                            <img 
+                                src="{{ asset('icon/icon-arrow.svg') }}" 
+                                alt="Arrow" 
+                                class="accordion-selector inline-block mx-auto"
+                            >
+                            {{-- <i class="fa-solid fa-angle-down"></i> --}}
                         </div>
                         <!-- Content -->
                         <div class="accordion-body bg-white px-5 pt-0 overflow-hidden max-h-0">
@@ -227,7 +336,7 @@ $skills = [
                     <img 
                         src="{{ asset('img/diter-aboutme.png') }}"
                         alt="Diter About Me"  
-                        class="about-cover-img mx-auto md:mr-0"
+                        class="about-cover-img mx-auto w-[280px] md:w-auto md:mr-0"
                     >
                 </div>
             </div>
@@ -257,73 +366,6 @@ $skills = [
                 <span class="font-bold text-blue-500">¡Compruébalo!</span>
             </p>
         </div>
-        @php
-            $customers = [
-                [
-                    'name' => 'ExpresArte Mejor',
-                    'description' => 'Diseño y construcción de plataforma web orientado a cursos de oratoria, locución, blog y eventos.',
-                    'badges' => ['Wordpress', 'Elementor', 'Diseño Web'],
-                    'link_web' => 'https://expresartemejor.com',
-                    'link_rrss' => 'https://',
-                    'cover' => 'img/customers-expresartemejor.png',
-                    'theme-color' => 'black',
-                ],
-                [
-                    'name' => 'Aremisse Lima',
-                    'description' => 'Sitio web corporativo para empresa de transporte de personal, turístico y corporativo.',
-                    'badges' => ['Laravel', 'Vue JS', 'Diseño UI'],
-                    'link_web' => 'https://aremisselima.com',
-                    'link_rrss' => 'https://',
-                    'cover' => 'img/customers-aremisse.png',
-                    'theme-color' => 'yellow',
-                ],
-                [
-                    'name' => 'INGYMEC',
-                    'description' => 'Análisis, diseño de arquitectura web y construcción de sitio web corporativo del rubro metal mecánica.',
-                    'badges' => ['Wordpress', 'Divi', 'Diseño Web'],
-                    'link_web' => 'https://ingymec.com',
-                    'link_rrss' => 'https://',
-                    'cover' => 'img/customers-ingymec.png',
-                    'theme-color' => 'blue',
-                ],
-                [
-                    'name' => 'InterConnecta',
-                    'description' => 'Construcción de plataforma web personalizada para visualizar métricas y perfiles de empleados.',
-                    'badges' => ['Laravel', 'Vue JS', 'Diseño UI'],
-                    'link_web' => '#',
-                    'link_rrss' => 'https://',
-                    'cover' => 'img/customers-interconnecta.png',
-                    'theme-color' => 'black',
-                ],
-                [
-                    'name' => 'El Rico Store',
-                    'description' => 'Construcción y diseño de e-Commerce para empresa de venta de ropa de sector geek 🔥.',
-                    'badges' => ['eCommerce', 'Diseño Web', 'Wordpress'],
-                    'link_web' => 'https://elricostore.com',
-                    'link_rrss' => 'https://',
-                    'cover' => 'img/customers-elricostore.png',
-                    'theme-color' => 'blue',
-                ],
-                [
-                    'name' => 'AK Tech. Solutions',
-                    'description' => 'Diseño y construcción de sitio web corporativo de sector de minero e implementación de telemandos.',
-                    'badges' => ['Wordpress', 'Elementor', 'Diseño Web'],
-                    'link_web' => 'https://aktechnicalsolutions.com',
-                    'link_rrss' => 'https://',
-                    'cover' => 'img/customers-aktechnical.png',
-                    'theme-color' => 'yellow',
-                ],
-                [
-                    'name' => 'Corporación Marles',
-                    'description' => 'Arquitectura web, diseño y construcción de catálogo virtual para mayoreo de productos de panadería.',
-                    'badges' => ['Arquitectura', 'Diseño Web', 'Wordpress'],
-                    'link_web' => 'https://corporacionmarles.com',
-                    'link_rrss' => 'https://',
-                    'cover' => 'img/customers-corpmarles.png',
-                    'theme-color' => 'black',
-                ],
-            ];
-        @endphp 
         @foreach ($customers as $customer)
             @switch($customer['theme-color'])
                 @case('black')
@@ -345,74 +387,29 @@ $skills = [
                 ¿Qué dicen de mis <span class="font-heading text-blue-500">resultados</span>?
             </h2>
             <p class="text-gray-normal text-md mb-6">
-                Cada vez, son más personas las que confían en mis <span class="font-bold">resultados y trabajo</span>. <br>
+                Cada vez, son más personas las que confían en <span class="font-bold">mi trabajo</span>. <br>
                 Anímate y vamos a construir algo grande <span class="font-bold text-blue-500">¡Juntos!</span>
             </p>
         </div>
         <div class="testimonials-container max-w-6xl mx-auto overflow-x-auto scrollbar flex items-center">
-            <div class="testimonial-item flex-none mb-12 first:ml-6 last:mr-6 mr-6 w-10/12 md:w-2/5">
-                <div class="testimonial-item-body text-center bg-white rounded-lg py-8 px-8 mb-6">
-                    <p class="text-md mb-9 text-gray-normal">
-                        Estamos realmente contentos de contar con los servicios profesionales de Diter. Desde la funcionalidad, el asesoramiento y las soluciones precisas en el tiempo, los servicios prestados por Diter son excelentes y el trato es muy cercano.
-                    </p>
+            @foreach ($testimonials as $testimony)
+                <div class="testimonial-item flex-none mb-12 first:ml-6 last:mr-6 mr-6 w-10/12 md:w-2/5">
+                    <div class="testimonial-item-body text-center bg-white rounded-lg py-8 px-8 mb-6">
+                        <p class="text-md mb-9 text-gray-normal">
+                            {{ $testimony['quote'] }}
+                        </p>
+                    </div>
+                    <div class="testimonial-item-owner -mt-20">
+                        <img 
+                            src="{{ asset($testimony['owner_photo']) }}"
+                            alt="{{ $testimony['owner_name'] }}"  
+                            class="testimonial-cover-img mx-auto"
+                        >
+                        <h1 class="text-md font-bold text-center text-gray-title">{{ $testimony['owner_name'] }}</h1>
+                        <p class="text-xs text-center text-gray-light">{{ $testimony['owner_title'] }}</p>
+                    </div>
                 </div>
-                <div class="testimonial-item-owner -mt-20">
-                    <img 
-                        src="{{ asset('img/testimonial-expresartemejor.png') }}"
-                        alt="Jesús Morales - Expresarte Mejor"  
-                        class="testimonial-cover-img mx-auto"
-                    >
-                    <h1 class="text-md font-bold text-center text-gray-title">Jesús Morales</h1>
-                    <p class="text-xs text-center text-gray-light">CEO de ExpresArte Mejor</p>
-                </div>
-            </div>
-            <div class="testimonial-item flex-none mb-12 first:ml-6 last:mr-6 mr-6 w-10/12 md:w-2/5">
-                <div class="testimonial-item-body text-center bg-white rounded-lg py-8 px-8 mb-6">
-                    <p class="text-md mb-9 text-gray-normal">
-                        Todo el proceso de creación de la web fue super rapido y  de manera eficaz. Te ayudan y asesoran en todo el proceso y posterior a la entrega de la web. Realmente recomendables 100% y super confiables
-                    </p>
-                </div>
-                <div class="testimonial-item-owner -mt-20">
-                    <img 
-                        src="{{ asset('img/testimonial-elricostore.png') }}"
-                        alt="Jesús Morales - Expresarte Mejor"  
-                        class="testimonial-cover-img mx-auto"
-                    >
-                    <h1 class="text-md font-bold text-center text-gray-title">Sarita Pariño</h1>
-                    <p class="text-xs text-center text-gray-light">CEO de El Rico Store</p>
-                </div>
-            </div>
-            <div class="testimonial-item flex-none mb-12 first:ml-6 last:mr-6 mr-6 w-10/12 md:w-2/5">
-                <div class="testimonial-item-body text-center bg-white rounded-lg py-8 px-8 mb-6">
-                    <p class="text-md mb-9 text-gray-normal">
-                        Super recomendado, cumplió la expectativa de A & K Technical Solution's SAC, aportó ideas adicionales que lograron dar a conocer a los clientes los productos y servicios que  brindamos, contento con los resultados obtenidos.
-                    </p>
-                </div>
-                <div class="testimonial-item-owner -mt-20">
-                    <img 
-                        src="{{ asset('img/testimonial-aktechnical.png') }}"
-                        alt="Jesús Morales - Expresarte Mejor"  
-                        class="testimonial-cover-img mx-auto"
-                    >
-                    <h1 class="text-md font-bold text-center text-gray-title">Arturo Ramirez</h1>
-                    <p class="text-xs text-center text-gray-light">Gerente de AK Tech. Solutions</p>
-                </div>
-            </div>
-            <div class="testimonial-item flex-none mb-12 first:ml-6 last:mr-6 mr-6 w-10/12 md:w-2/5">
-                <div class="testimonial-item-body text-center bg-white rounded-lg py-8 px-8 mb-6">
-                    <p class="text-md mb-9 text-gray-normal">
-                        Gracias por la rapidez y eficiencia en la creación de nuestra página web https://aremisse.com/, la cual ha quedado lista antes de tiempo y mucho mejor de lo que nos esperábamos!!
-                    </p>
-                </div>
-                <div class="testimonial-item-owner -mt-20">
-                    <img 
-                        src="{{ asset('img/testimonial-aremisse.png') }}"
-                        alt="Jesús Morales - Expresarte Mejor"  
-                        class="testimonial-cover-img mx-auto"
-                    >
-                    <h1 class="text-md font-bold text-center text-gray-title">Solange Del Río</h1>
-                    <p class="text-xs text-center text-gray-light">CEO de Aremisse Lima</p>
-                </div>
+            @endforeach
             </div>
         </div>
     </section>
@@ -546,11 +543,7 @@ $skills = [
         </div>
 
     </section>
-
-<script>
-    
-</script>
-    <nav class="nav sticky bottom-0 z-10 w-full mx-auto bg-black-400 text-xs font-bold font-heading md:hidden">
+    <nav class="nav sticky bottom-0 z-10 w-full mx-auto bg-black-500 text-xs font-bold font-heading md:hidden">
         <ul class="flex items-center justify-evenly h-[40px] space-x-2 py-3">
             <li class="nav-item">
                 <a href="#about-banner" class="nav-item__link text-black-50">Sobre mí</a>
@@ -568,7 +561,7 @@ $skills = [
     </nav>
 @endsection
 
-
+@section('scripts')
 <script>
     document.addEventListener('DOMContentLoaded', (ed) => {
         // Active link for Main Navigation Menu
@@ -593,19 +586,16 @@ $skills = [
                 // Condition handling
                 if (accordionMaxHeight == '0px' || accordionMaxHeight.length == 0) {
                     accordionContent.style.maxHeight = `${accordionContent.scrollHeight + 32}px`
-                    header.querySelector('.fa-solid').classList.remove('fa-angle-down')
-                    header.querySelector('.fa-solid').classList.add('fa-angle-up')
                     header.parentElement.classList.add('bg-blue-50')
                 } else {
                     accordionContent.style.maxHeight = `0px`
-                    header.querySelector('.fa-solid').classList.add('fa-angle-down')
-                    header.querySelector('.fa-solid').classList.remove('fa-angle-up')
-                    header.parentElement.classList.remove('bg-blue-50')
                 }
+                header.querySelector('.accordion-selector').classList.toggle('rotate-180')
             })
         })
     })
 </script>
+@endsection
 
 @section('footer')
     @parent
