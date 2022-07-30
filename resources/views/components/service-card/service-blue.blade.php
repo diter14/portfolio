@@ -12,6 +12,8 @@
             </div>
             <div class="card-service-cover col-span-4 mt-12 md:mt-0">
                 <img 
+                    loading="lazy"
+                    width="200"
                     src="{{ asset('img/service-web-development.png') }}"
                     alt="Servicio-Web-Development"  
                     class="service-cover-img mx-auto md:mr-3"

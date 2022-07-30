@@ -2,6 +2,7 @@
 /public/hot
 /public/css/*.css
 /public/js/*.js
+/public/mix-manifest.json
 /public/img/*
 /public/icon/*
 /public/storage
@@ -17,3 +18,4 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+/v0.0.1
