@@ -1,9 +1,9 @@
 <?php
     $meta = [
         'title' => 'Diter Terrones',
-        'description' => 'Diseñador UI y Frontend Developer. 🔥 Apasionado por la productividad y desarrollo personal',
-        'url' => 'https://diterterrones.com',
-        'cover' => 'img/diter-terrones-cover.png',
+        'description' => 'Diseñador Web y Frontend Developer. 🔥 Apasionado por la tecnología, el diseño y desarrollo web.',
+        'url' => 'https://diterterrones.com/',
+        'cover' => '/img/diter-terrones-cover-open-graph.png',
         'favicon' => '/img/diter-terrones-favicon-32.png',
         'theme_color' => '#5171fb'
     ]
@@ -14,12 +14,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     <title>Diter Terrones</title>
     <!-- metatags -->
     <link rel="icon" href="<?= $meta['favicon']; ?>" sizes="32x32" type="image/png">
     <meta name="theme-color" content="<?= $meta['theme_color']; ?>" />
-
     <meta name="title" content="<?= $meta['title']; ?>">
     <meta name="description" content="<?= $meta['description']; ?>">
 
@@ -30,13 +29,15 @@
     <meta property="og:url" content="<?= $meta['url']; ?>">
     <meta property="og:locale" content="es_PE">
     <meta property="og:site_name" content="Diter Terrones">
-    <meta property="og:image" content="<?= 'https://diterterrones.com/img/diter-terrones-cover-open-graph.png'; ?>">
+    <meta property="og:image" content="<?= $meta['cover']; ?>">
+
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:title" content="<?= $meta['title']; ?>">
     <meta property="twitter:site" content="@diter_terrones">
     <meta property="twitter:description" content="<?= $meta['description']; ?>">
-    <meta name="twitter:image" content="<?= "//$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" . $meta['cover']; ?>">
+    <meta name="twitter:image" content="<?= $meta['cover']; ?>">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -53,6 +54,7 @@
     </main>
 
     @yield('scripts')
+    <script src="{{ mix('/js/app.js') }}"></script>
 
     @section('footer')
         @include('components.main-footer')
