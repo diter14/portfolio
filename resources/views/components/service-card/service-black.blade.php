@@ -4,7 +4,7 @@
             <div class="card-service-body col-span-8 text-center md:text-left">
                 <h2 class="font-heading font-black text-heading-h4 md:text-heading-h3 text-gray-title mb-9 md:mb-6">Aplicaciones Web</h2>
                 <p class="text-md mb-9 text-gray-normal">
-                    Si quieres desarrollar una aplicación o sistema para tu negocio. Escalable y personalizado, hecho a la medida.
+                    Si quieres desarrollar una aplicación o sistema para tu negocio que sea escalable y personalizado, hecho a la medida, ¡Construyamos tu aplicación web!
                 </p>
                 <a href="#contact-banner" class="rounded-full bg-black-400 text-white py-2 px-4 font-heading font-bold w-fit mx-auto mb-9">
                     Desarrolla mi app web >

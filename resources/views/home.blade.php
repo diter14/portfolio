@@ -274,7 +274,7 @@ $testimonials = [
                     Si te gusta mi perfil, <span class="font-bold text-blue-500">¡charlemos!</span>
                 </p>
                 <div class="grid grid-cols-1 md:grid-cols-2 mb-8 md:mb-0">
-                    <div class="transition hover:bg-yellow-50 -md:ml-5">
+                    <div class="transition hover:bg-yellow-50 md:-ml-5">
                         <!-- header -->
                         <div class="accordion-header cursor-pointer transition flex justify-center md:justify-start space-x-3 px-5 items-center h-16">
                             <h3 class="font-heading text-heading-h5 font-bold">
@@ -285,7 +285,6 @@ $testimonials = [
                                 alt="Arrow" 
                                 class="accordion-selector inline-block mx-auto"
                             >
-                            {{-- <i class="fa-solid fa-angle-down"></i> --}}
                         </div>
                         <!-- Content -->
                         <div class="accordion-body bg-white px-5 pt-0 overflow-hidden max-h-0">
@@ -313,7 +312,6 @@ $testimonials = [
                                 alt="Arrow" 
                                 class="accordion-selector inline-block mx-auto"
                             >
-                            {{-- <i class="fa-solid fa-angle-down"></i> --}}
                         </div>
                         <!-- Content -->
                         <div class="accordion-body bg-white px-5 pt-0 overflow-hidden max-h-0">
@@ -336,7 +334,7 @@ $testimonials = [
                     <img 
                         src="{{ asset('img/diter-aboutme.png') }}"
                         alt="Diter About Me"  
-                        class="about-cover-img mx-auto w-[280px] md:w-auto md:mr-0"
+                        class="about-cover-img mx-auto w-[300px] md:mr-0"
                     >
                 </div>
             </div>

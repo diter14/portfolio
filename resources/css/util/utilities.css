@@ -51,7 +51,12 @@
     background-repeat: repeat-x;
     animation: floating-banner-mobile 1.5s ease-in-out infinite alternate;
 }
-  
+@media (min-width: 768px) {
+    #main-banner {
+        background-image: none;
+    }
+}
+
 @keyframes floating-banner-web {
     100% { transform: translate3D(0,-40px,0); }
 }
