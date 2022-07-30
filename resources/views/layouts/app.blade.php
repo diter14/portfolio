@@ -52,6 +52,8 @@
         @yield('content')
     </main>
 
+    @yield('scripts')
+
     @section('footer')
         @include('components.main-footer')
     @show

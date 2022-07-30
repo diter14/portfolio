@@ -9,7 +9,11 @@ module.exports = {
     plugins: [
     ],
     theme: {
-        extend: {},
+        extend: {
+            boxShadow: {
+                'main-menu': '0px 0px 4px 0 rgb(165 173 180 / 0.4);',
+            }
+        },
         fontFamily: {
             'heading': ['Red Hat Display', 'sans-serif'],
             'body': ['DM Sans', 'sans-serif'],

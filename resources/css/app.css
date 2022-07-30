@@ -2,15 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-    font-family: 'DM Sans', sans-serif;
-}
+@import './base/base.css';
+@import './components/cards.css';
+@import './util/utilities.css';
 
-* {
-    color: #464C53;
-}
 
-/* @layer utilities {
+@layer utilities {
     @variants responsive {
       .no-scrollbar::-webkit-scrollbar {
         display: none;
@@ -21,4 +18,4 @@
         scrollbar-width: none; 
       }
     }
-} */
+}

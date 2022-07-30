@@ -1,0 +1,76 @@
+/* Tamaño del scroll */
+.scrollbar::-webkit-scrollbar {
+    height: 12px;
+}
+  
+/* Estilos barra (thumb) de scroll */
+.scrollbar::-webkit-scrollbar-thumb {
+    background: #ddd;
+    border-radius: 6px;
+}
+  
+.scrollbar::-webkit-scrollbar-thumb:active {
+    background-color: #ccc;
+}
+  
+.scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #bbb;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.1);
+}
+  
+/* Estilos track de scroll */
+.scrollbar::-webkit-scrollbar-track {
+    background: #eee;
+    border-radius: 6px;
+}
+  
+.scrollbar::-webkit-scrollbar-track:hover, 
+.scrollbar::-webkit-scrollbar-track:active {
+    background: #ddd;
+}
+
+
+
+
+.floating {
+    animation-name: floating-banner-web;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out; 
+  }
+  
+.floating.animation-delay-1 {
+    animation-delay: 0.5s;
+}
+
+
+#main-banner {
+    background-image: url('/img/mobile-background-pattern.png');
+    background-position: 0px 0px;
+    background-repeat: repeat-x;
+    animation: floating-banner-mobile 1.5s ease-in-out infinite alternate;
+}
+@media (min-width: 768px) {
+    #main-banner {
+        background-image: none;
+    }
+}
+
+@keyframes floating-banner-web {
+    100% { transform: translate3D(0,-40px,0); }
+}
+
+@keyframes floating-banner-mobile {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 0 15px;
+    }
+}
+
+
+.accordion-body {
+    transition: max-height 0.3s ease-out, padding 0.3s ease;
+}
