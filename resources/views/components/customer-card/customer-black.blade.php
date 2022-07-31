@@ -16,11 +16,11 @@
                 @endforeach
             </div>
             <div class="card-buttons absolute md:static bottom-8 left-0 w-full">
-                <a href="{{ $customer['link_web'] }}" target="_blank" class="bg-black-500 text-white font-heading font-bold rounded-full mx-auto mr-2 md:mr-4 py-2 md:py-1 px-4">
-                    Visitar Sitio >
+                <a href="{{ $customer['link_process'] }}" target="_blank" class="bg-black-500 text-white font-heading font-bold rounded-full mx-auto mr-2 md:mr-4 py-2 md:py-1 px-4">
+                    Ver presentación >
                 </a>
-                <a href="#" class="font-heading text-gray-normal bg-black-100 rounded-full mx-auto py-2 md:py-1 px-4">
-                    Ver proceso
+                <a href="{{ $customer['link_web'] }}" class="font-heading text-gray-normal bg-black-100 rounded-full mx-auto py-2 md:py-1 px-4">
+                    Visitar Sitio
                 </a>
             </div>
         </div>
