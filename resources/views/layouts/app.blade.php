@@ -36,7 +36,7 @@
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
-            gtag('config', {{ env('GOOGLE_ANALYTICS_DTWFLOW') }});
+            gtag('config', "{{ env('GOOGLE_ANALYTICS_DTWFLOW') }}");
         </script>
     @endproduction
 
