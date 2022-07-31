@@ -8,179 +8,6 @@
  
 @section('content')
 
-
-@php
-$skills = [
-    'tech' => [
-        [
-            'logo' => 'img/skills-figma.png',
-            'label' => 'Figma'
-        ],
-        [
-            'logo' => 'img/skills-adobexd.png',
-            'label' => 'Adobe Xd'
-        ],
-        [
-            'logo' => 'img/skills-laravel.png',
-            'label' => 'Laravel'
-        ],
-        [
-            'logo' => 'img/skills-php.png',
-            'label' => 'PHP'
-        ],
-        [
-            'logo' => 'img/skills-wordpress.png',
-            'label' => 'Wordpress'
-        ],
-        [
-            'logo' => 'img/skills-html.png',
-            'label' => 'HTML'
-        ],
-        [
-            'logo' => 'img/skills-css.png',
-            'label' => 'CSS'
-        ],
-        [
-            'logo' => 'img/skills-javascript.png',
-            'label' => 'JavaScript'
-        ],
-        [
-            'logo' => 'img/skills-vuejs.png',
-            'label' => 'Vue.js'
-        ],
-        [
-            'logo' => 'img/skills-git.png',
-            'label' => 'Git'
-        ],
-    ],
-    'soft' => [
-        [
-            'logo' => 'img/skills-vibes.png',
-            'label' => 'GoodVibes'
-        ],
-        [
-            'logo' => 'img/skills-disciplined.png',
-            'label' => 'Disciplinado'
-        ],
-        [
-            'logo' => 'img/skills-coworker.png',
-            'label' => 'Empático'
-        ],
-        [
-            'logo' => 'img/skills-focus.png',
-            'label' => 'Enfocado'
-        ],
-        [
-            'logo' => 'img/skills-creative.png',
-            'label' => 'Creativo'
-        ],
-        [
-            'logo' => 'img/skills-openmind.png',
-            'label' => 'Open Mind'
-        ],
-        [
-            'logo' => 'img/skills-listener.png',
-            'label' => 'Escuchador'
-        ],
-        [
-            'logo' => 'img/skills-communicator.png',
-            'label' => 'Comunicador'
-        ],
-    ]
-];
-$customers = [
-    [
-        'name' => 'ExpresArte Mejor',
-        'description' => 'Diseño y construcción de plataforma web orientado a cursos de oratoria, locución, blog y eventos.',
-        'badges' => ['Wordpress', 'Elementor', 'Diseño Web'],
-        'link_web' => 'https://expresartemejor.com',
-        'link_rrss' => 'https://',
-        'cover' => 'img/customers-expresartemejor.png',
-        'theme-color' => 'black',
-    ],
-    [
-        'name' => 'Aremisse Lima',
-        'description' => 'Sitio web corporativo para empresa de transporte de personal, turístico y corporativo.',
-        'badges' => ['Laravel', 'Vue JS', 'Diseño UI'],
-        'link_web' => 'https://aremisselima.com',
-        'link_rrss' => 'https://',
-        'cover' => 'img/customers-aremisse.png',
-        'theme-color' => 'yellow',
-    ],
-    [
-        'name' => 'INGYMEC',
-        'description' => 'Análisis, diseño de arquitectura web y construcción de sitio web corporativo del rubro metal mecánica.',
-        'badges' => ['Wordpress', 'Divi', 'Diseño Web'],
-        'link_web' => 'https://ingymec.com',
-        'link_rrss' => 'https://',
-        'cover' => 'img/customers-ingymec.png',
-        'theme-color' => 'blue',
-    ],
-    [
-        'name' => 'InterConnecta',
-        'description' => 'Construcción de plataforma web personalizada para visualizar métricas y perfiles de empleados.',
-        'badges' => ['Laravel', 'Vue JS', 'Diseño UI'],
-        'link_web' => '#',
-        'link_rrss' => 'https://',
-        'cover' => 'img/customers-interconnecta.png',
-        'theme-color' => 'black',
-    ],
-    [
-        'name' => 'El Rico Store',
-        'description' => 'Construcción y diseño de e-Commerce para empresa de venta de ropa de sector geek 🔥.',
-        'badges' => ['eCommerce', 'Diseño Web', 'Wordpress'],
-        'link_web' => 'https://elricostore.com',
-        'link_rrss' => 'https://',
-        'cover' => 'img/customers-elricostore.png',
-        'theme-color' => 'blue',
-    ],
-    [
-        'name' => 'AK Tech. Solutions',
-        'description' => 'Diseño y construcción de sitio web corporativo de sector de minero e implementación de telemandos.',
-        'badges' => ['Wordpress', 'Elementor', 'Diseño Web'],
-        'link_web' => 'https://aktechnicalsolutions.com',
-        'link_rrss' => 'https://',
-        'cover' => 'img/customers-aktechnical.png',
-        'theme-color' => 'yellow',
-    ],
-    [
-        'name' => 'Corporación Marles',
-        'description' => 'Arquitectura web, diseño y construcción de catálogo virtual para mayoreo de productos de panadería.',
-        'badges' => ['Arquitectura', 'Diseño Web', 'Wordpress'],
-        'link_web' => 'https://corporacionmarles.com',
-        'link_rrss' => 'https://',
-        'cover' => 'img/customers-corpmarles.png',
-        'theme-color' => 'black',
-    ],
-];
-$testimonials = [
-    [
-        'quote' => 'Estamos realmente contentos de contar con los servicios profesionales de Diter. Desde la funcionalidad, el asesoramiento y las soluciones precisas en el tiempo, los servicios prestados por Diter son excelentes y el trato es muy cercano.',
-        'owner_photo' => 'img/testimonial-expresartemejor.png',
-        'owner_name' => 'Jesús Morales',
-        'owner_title' => 'CEO de ExpresArte Mejor',
-    ],
-    [
-        'quote' => 'Todo el proceso de creación de la web fue super rapido y  de manera eficaz. Te ayudan y asesoran en todo el proceso y posterior a la entrega de la web. Realmente recomendables 100% y super confiables.',
-        'owner_photo' => 'img/testimonial-elricostore.png',
-        'owner_name' => 'Sarita Pariño',
-        'owner_title' => 'CEO de El Rico Store',
-    ],
-    [
-        'quote' => 'Gracias por la rapidez y eficiencia en la creación de nuestra página web https://aremisse.com/, la cual ha quedado lista antes de tiempo y mucho mejor de lo que nos esperábamos!!',
-        'owner_photo' => 'img/testimonial-aremisse.png',
-        'owner_name' => 'Solange Del Río',
-        'owner_title' => 'CEO de Aremisse Lima',
-    ],
-    [
-        'quote' => 'Super recomendado, cumplió la expectativa de A & K Technical Solution\'s SAC, aportó ideas adicionales que lograron dar a conocer a los clientes los productos y servicios que  brindamos, contento con los resultados obtenidos.',
-        'owner_photo' => 'img/testimonial-aktechnical.png',
-        'owner_name' => 'Arturo Ramirez',
-        'owner_title' => 'Gerente de AK Tech. Solutions',
-    ],
-];
-@endphp 
-
     <section id="main-banner" class="main-banner max-w-6xl flex md:block justify-center h-screen md:h-auto mx-auto -mt-[90px] md:mt-0">
         <div class="grid grid-cols-1 md:grid-cols-2 content-center mb-8">
             <div class="self-center text-center md:text-left mb-6">
@@ -230,7 +57,7 @@ $testimonials = [
             </div>
         </div>
     </section>
-    <nav class="hidden md:block nav sticky top-5 z-[100] w-2/3 bg-black-500 shadow-main-menu shadow-black-200/40 rounded-full font-bold font-heading mx-auto -mt-5 mb-10">
+    <nav class="hidden md:block nav sticky top-5 z-[100] w-3/6 bg-black-500 shadow-main-menu shadow-black-200/40 rounded-full font-bold font-heading mx-auto -mt-5 mb-10">
         <ul class="flex items-center justify-evenly text-xl h-[80px] space-x-2 py-3">
             <li class="nav-item">
                 <a href="#about-banner" class="nav-item__link">
@@ -272,9 +99,10 @@ $testimonials = [
                     Cuento con +5 años de experticia como <span class="font-bold">Frontend Developer</span>, ayudo a emprendedores y empresas a tener presencia digital e incrementar el alcance de lo que ofrecen combinando mis habilidades de <span class="font-bold">Diseño UI</span> con la <span class="font-bold">construcción de sitios</span> o aplicaciones web.
                 </p>
                 <p class="text-gray-normal text-md mb-6">
-                    Si te gusta mi perfil, <span class="font-bold text-blue-500">¡charlemos!</span>
+                    Si te gusta mi perfil, <a href="#contact-banner"><span class="font-bold text-blue-500">¡charlemos!</span></a>
                 </p>
                 <div class="grid grid-cols-1 md:grid-cols-2 mb-8 md:mb-0">
+
                     <div class="transition hover:bg-yellow-50 md:-ml-5">
                         <!-- header -->
                         <div class="accordion-header cursor-pointer transition flex justify-center md:justify-start space-x-3 px-5 items-center h-16">
@@ -289,7 +117,7 @@ $testimonials = [
                         </div>
                         <!-- Content -->
                         <div class="accordion-body bg-white px-5 pt-0 overflow-hidden max-h-0">
-                            <div class="flex flex-row flex-wrap">
+                            <div class="grid grid-cols-auto-fit place-content-center gap-3">
                                 @foreach ($skills['tech'] as $skill)
                                     <div class="skills-item px-4 pt-5 pb-3">
                                         <img src="{{ asset($skill['logo']) }}" alt="{{ $skill['label'] }}" class="max-w-[40px] mx-auto">
@@ -316,7 +144,7 @@ $testimonials = [
                         </div>
                         <!-- Content -->
                         <div class="accordion-body bg-white px-5 pt-0 overflow-hidden max-h-0">
-                            <div class="flex flex-row flex-wrap">
+                            <div class="grid grid-cols-auto-fit place-content-center gap-3">
                                 @foreach ($skills['soft'] as $skill)
                                     <div class="skills-item px-4 pt-5 pb-3">
                                         <img src="{{ asset($skill['logo']) }}" alt="{{ $skill['label'] }}" class="max-w-[40px] mx-auto">
@@ -428,70 +256,29 @@ $testimonials = [
                 </p>
             </div>
             <div class="md:col-span-6 md:col-start-7 grid grid-cols-2 md:grid-cols-4 grid-rows-2 md:grid-rows-1 mb-8 md:mb-0">
-                <div class="self-center text-center mb-8 md:mb-0">
-                    <img 
-                        loading="lazy"
-                        class="mx-auto mb-3"
-                        width="65"
-                        src="{{ asset('img/rrss-logo-linkedin.png') }}"
-                        alt="Logo LinkedIn"
-                        >
-                    <a 
-                        href="https://www.linkedin.com/in/diter-terrones/"
-                        target="_blank"
-                        class="font-body text-gray-normal text-sm underline mb-3 md:mb-0"
-                        >
-                        /in/diter-terrones
-                    </a>
-                </div>
-                <div class="self-center text-center mb-8 md:mb-0">
-                    <img 
-                        loading="lazy"
-                        class="mx-auto mb-3"
-                        width="65"
-                        src="{{ asset('img/rrss-logo-facebook.png') }}"
-                        alt="Logo Facebook"
-                        >
-                    <a 
-                        href="https://facebook.com/diter.terrones"
-                        target="_blank"
-                        class="font-body text-gray-normal text-sm underline mb-3 md:mb-0"
-                        >
-                        /diter.terrones
-                    </a>
-                </div>
-                <div class="self-center text-center mb-8 md:mb-0">
-                    <img 
-                        loading="lazy"
-                        class="mx-auto mb-3"
-                        width="65"
-                        src="{{ asset('img/rrss-logo-twitter.png') }}"
-                        alt="Logo Twitter"
-                        >
-                    <a 
-                        href="https://twitter.com/diter_terrones"
-                        target="_blank"
-                        class="font-body text-gray-normal text-sm underline mb-3 md:mb-0"
-                        >
-                        /@diter_terrones
-                    </a>
-                </div>
-                <div class="self-center text-center mb-8 md:mb-0">
-                    <img 
-                        loading="lazy"
-                        class="mx-auto mb-3"
-                        width="65"
-                        src="{{ asset('img/rrss-logo-instagram.png') }}"
-                        alt="Logo Instagram"
-                        >
-                    <a 
-                        href="https://instagram.com/diter.terrones/"
-                        target="_blank"
-                        class="font-body text-gray-normal text-sm underline mb-3 md:mb-0"
-                        >
-                        /@diter.terrones
-                    </a>
-                </div>
+                @foreach ($rrss as $item)
+                    <div class="self-center text-center mb-8 md:mb-0">
+                        <a 
+                            href="{{ $item['link'] }}"
+                            target="_blank"
+                            >
+                            <img 
+                                loading="lazy"
+                                class="mx-auto mb-3"
+                                width="65"
+                                src="{{ asset($item['logo']) }}"
+                                alt="{{ $item['label_alt'] }}"
+                                >
+                        </a>
+                        <a 
+                            href="{{ $item['link'] }}"
+                            target="_blank"
+                            class="font-body text-gray-normal text-sm underline mb-3 md:mb-0"
+                            >
+                            {{ $item['label'] }}
+                        </a>
+                    </div>
+                @endforeach
             </div>
         </div>
     </section>
@@ -621,7 +408,6 @@ $testimonials = [
                 // Condition handling
                 if (accordionMaxHeight == '0px' || accordionMaxHeight.length == 0) {
                     accordionContent.style.maxHeight = `${accordionContent.scrollHeight + 32}px`
-                    header.parentElement.classList.add('bg-blue-50')
                 } else {
                     accordionContent.style.maxHeight = `0px`
                 }
