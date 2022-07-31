@@ -1,5 +1,5 @@
 @if ($theme == 'light')
-    <div class="card-service md:max-w-[960px] mb-12 mx-4 md:mx-auto px-10 md:px-8 py-12 md:py-10 hover:shadow-main-menu hover:shadow-black-200/40 bg-white rounded-lg">
+    <div class="card-service md:max-w-[960px] mb-12 mx-4 md:mx-auto px-10 md:px-8 py-12 md:py-10 hover:shadow-main-menu hover:shadow-black-300/20 bg-white rounded-lg">
         <div class="grid grid-cols-1 md:grid-cols-12 grid-rows-1">
             <div class="card-service-body col-span-8 text-center md:text-left">
                 <h2 class="font-heading font-black text-heading-h4 md:text-heading-h3 text-gray-title mb-9 md:mb-6">Aplicaciones Web</h2>

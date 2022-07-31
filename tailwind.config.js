@@ -12,7 +12,11 @@ module.exports = {
         extend: {
             boxShadow: {
                 'main-menu': '0px 0px 4px 0 rgb(165 173 180 / 0.4);',
-            }
+            },
+            gridTemplateColumns: {
+                'auto-fit': 'repeat(auto-fit, minmax(0, 100px))',
+                'auto-fill': 'repeat(auto-fill, minmax(0, 100px))',
+            },
         },
         fontFamily: {
             'heading': ['Red Hat Display', 'sans-serif'],

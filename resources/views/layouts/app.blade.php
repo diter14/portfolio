@@ -1,13 +1,3 @@
-<?php
-    $meta = [
-        'title' => 'Diter Terrones',
-        'description' => 'Diseñador Web y Frontend Developer. 🔥 Apasionado por la tecnología, el diseño y desarrollo web.',
-        'url' => 'https://diterterrones.com/',
-        'cover' => '/img/diter-terrones-cover-open-graph.png',
-        'favicon' => '/img/diter-terrones-favicon-32.png',
-        'theme_color' => '#5171fb'
-    ]
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,6 +27,18 @@
     <meta property="twitter:site" content="@diter_terrones">
     <meta property="twitter:description" content="<?= $meta['description']; ?>">
     <meta name="twitter:image" content="<?= $meta['cover']; ?>">
+
+    @production
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id={{ env('GOOGLE_ANALYTICS_DTWFLOW') }}"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', {{ env('GOOGLE_ANALYTICS_DTWFLOW') }});
+        </script>
+    @endproduction
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
