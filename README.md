@@ -9,7 +9,7 @@ I hope you enjoy it! 👍🏽
 - **[Laravel](https://laravel.com/)**
 - **[Tailwind CSS](https://tailwindcss.com/)**
 - **[Lightsail AWS](https://aws.amazon.com/es/lightsail/)**
-- **[Figma](https://aws.amazon.com/es/lightsail/)**
+- **[Figma](https://www.figma.com/)**
 
 
 ## Roadmap
