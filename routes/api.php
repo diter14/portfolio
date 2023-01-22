@@ -19,5 +19,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-// Route::get('mpk-plan', [MPKController::class,'getRecommendedPlan']);
 Route::post('mpk-plan', [MPKController::class,'getRecommendedPlan']);
+Route::get('cups/Masters', [MPKController::class,'getConsumoByCUPS']);
