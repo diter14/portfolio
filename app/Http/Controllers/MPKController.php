@@ -11,12 +11,13 @@ class MPKController extends Controller
         $tipoCalculo = $request->get('tipo_calculo') ?? '';
         $gastoPromedioMensual = $request->get('gasto_promedio_mensual') ?? 0;
         $nroPersonasPorHogar = $request->get('personas_x_hogar') ?? '1';
-        $artefactosUtilizados = $request->get('artefactos_utilizados') ?? ['Calefacción'];
+        $artefactosUtilizados = $request->get('artefactos_utilizados') ?? ['CALEFACCION_ELECTRICA'];
         $consumoPromedioMensual = $request->get('consumo_promedio_mensual') ?? 0;
-        $nroPaneles = $request->get('numero_paneles') ?? 6;
+        $nroPaneles = $request->get('numero_paneles') ?? rand(2,9);
+
+        $pagoContado = $nroPaneles * 590;
         
         $recommendedPlan = [
-            'request_id' => uniqid('MPK-'),
             'success' => true,
             'data' => [
                 'plan_recomendado'=> [
@@ -26,7 +27,7 @@ class MPKController extends Controller
                     'ahorro_mensual' => 44, // EUROS 
                     'ahorro_anual' => 529, // EUROS 
                     'ahorro_vida_util' => 15.876, // EUROS (30 AÑOS)
-                    'pago_contado' => 4000, // EUROS (es igual a coste_contado?)
+                    'pago_contado' => $pagoContado, // EUROS (es igual a coste_contado?)
                     'recuperacion_coste_inicial' => 4, //AÑOS
                     'pago_financiado' => [
                         'pago_mensual' => 31, // EUROS
@@ -45,6 +46,7 @@ class MPKController extends Controller
                 'personas_x_hogar' => $nroPersonasPorHogar,
                 'artefactos_utilizados' => $artefactosUtilizados,
                 'consumo_promedio_mensual' => $consumoPromedioMensual,
+                'request_id' => uniqid('MPK-'),
             ],
             'tipo_calculo' => $tipoCalculo
         ];
