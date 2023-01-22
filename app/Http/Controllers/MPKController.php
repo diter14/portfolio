@@ -12,10 +12,11 @@ class MPKController extends Controller
         $gastoPromedioMensual = $request->get('gasto_promedio_mensual') ?? 0;
         $nroPersonasPorHogar = $request->get('personas_x_hogar') ?? '1';
         $artefactosUtilizados = $request->get('artefactos_utilizados') ?? ['CALEFACCION_ELECTRICA'];
-        $consumoPromedioMensual = $request->get('consumo_promedio_mensual') ?? 0;
+        $consumoPromedioAnual = $request->get('consumo_promedio_anual') ?? rand(3000,5000);
+        $consumoPromedioMensual = $request->get('consumo_promedio_mensual') ?? ($consumoPromedioAnual/12);
         $nroPaneles = $request->get('numero_paneles') ?? rand(2,9);
 
-        $pagoContado = $nroPaneles * 590;
+        $pagoContado = $nroPaneles * 901;
         
         $recommendedPlan = [
             'success' => true,
@@ -45,7 +46,8 @@ class MPKController extends Controller
                 'gasto_promedio_mensual' => $gastoPromedioMensual,
                 'personas_x_hogar' => $nroPersonasPorHogar,
                 'artefactos_utilizados' => $artefactosUtilizados,
-                'consumo_promedio_mensual' => $consumoPromedioMensual,
+                'consumo_promedio_mensual' => (float) number_format($consumoPromedioMensual, 2, '.', ''),
+                'consumo_promedio_anual' => $consumoPromedioAnual,
                 'request_id' => uniqid('MPK-'),
             ],
             'tipo_calculo' => $tipoCalculo
