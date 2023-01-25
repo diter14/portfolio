@@ -19,5 +19,12 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('mpk-plan', [MPKController::class,'getRecommendedPlan']);
-Route::get('cups/Masters', [MPKController::class,'getConsumoByCUPS']);
+Route::get('mpk/cups', [MPKController::class,'getConsumoByCUPS']);
+Route::get('mpk/constants', [MPKController::class,'getCalculationConstants']);
+Route::post('mpk/plan', [MPKController::class,'getRecommendedPlan']);
+Route::post('mpk/send-plan', [MPKController::class,'sendRecommendedPlan']);
+
+Route::post('mpk/commercialization/validate-email', [MPKController::class,'validateEmailCommercialization']);
+Route::post('mpk/commercialization/verification-code', [MPKController::class,'getVerificationCodeCommercialization']);
+Route::post('mpk/commercialization/generate-contract', [MPKController::class,'generateContractCommercialization']);
+Route::post('mpk/commercialization/status-contract', [MPKController::class,'getStatusContractCommercialization']);
