@@ -70,7 +70,7 @@ class MPKController extends Controller
                 'PORCENTAJE_DE_FINANCIACION' => 100, // PORCENTAJE_DE_FINANCIACION
                 'PLAZOS_FINANCIACION' => 96, // PLAZOS_FINANCIACION
                 'POTENCIA_PANEL' => 660, // POTENCIA_PANEL_UNITARIO
-                'DEGRADACION_PANEL' => 0, // DEGRADACION_PANEL
+                'DEGRADACION_PANEL' => 5, // DEGRADACION_PANEL
                 'HORAS_PARQUE' => 1400, // HORAS_PARQUE
                 'COSTE_PANEL' => 901, // COSTO_PANEL_UNITARIO
                 'VIDA_UTIL_PLANTA' => 30, // VIDA_UTIL_PANEL_UNITARIO
