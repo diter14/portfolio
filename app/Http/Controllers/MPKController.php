@@ -22,6 +22,28 @@ class MPKController extends Controller
     const EURO_KWH_30_ANIOS = 0.03;
     const COSTO_ENERGIA_MEDIO_ESPANA_ULTIMOS_5_ANIOS = 0.1;
     const FACTOR_POTENCIA_PANEL = 1000;
+    const CONSUMO_PROMEDIO_POR_FAMILIA = [
+        [
+            'habitantes' => '1',
+            'consumo_promedio_anual' => 2200
+        ],
+        [
+            'habitantes' => '2',
+            'consumo_promedio_anual' => 2450
+        ],
+        [
+            'habitantes' => '3',
+            'consumo_promedio_anual' => 2700
+        ],
+        [
+            'habitantes' => '4',
+            'consumo_promedio_anual' => 3000
+        ],
+        [
+            'habitantes' => '5',
+            'consumo_promedio_anual' => 3200
+        ],
+    ];
     //
     const CAPACIDAD_PRODUCTIVA_PANEL = 924;
 
@@ -71,7 +93,12 @@ class MPKController extends Controller
                 'error' => 'Missing Authorization'
             ]);
         }
-        $tipoCalculo = $request->get('tipo_calculo') ?? 'Aproximado';
+        $gastoPromedioMensual = 0;
+        $gastoPromedioAnual = 0;
+        $consumoPromedioMensual = 0;
+        //
+        $tipoCalculo = $request->get('tipo_calculo') ?? 'Simulado';
+        //
         if ($tipoCalculo == 'Aproximado') {
             $gastoPromedioMensual = $request->get('gasto_promedio_mensual') ?? 120;
             $consumoPromedioMensual = (float) number_format(
@@ -79,103 +106,118 @@ class MPKController extends Controller
             2, '.', '');
             // dump($consumoPromedioMensual);
             $consumoPromedioAnual = (float) number_format($consumoPromedioMensual*12, 2, '.', '');
-            $potenciaRemotaRecomendada = ($consumoPromedioMensual* (12 / self::HORAS_PARQUE) * self::FACTOR_PRODUCCION * (1+self::DEGRADACION_PANEL/100));
-            // dump($potenciaRemotaRecomendada);
-            $nroPanelesRecomendados = ceil($potenciaRemotaRecomendada * (self::FACTOR_POTENCIA_PANEL/self::POTENCIA_PANEL_UNITARIO));
-            // dump($nroPanelesRecomendados);
-            $produccionCadaPanel = (float) number_format($nroPanelesRecomendados / self::PRODUCCION_ENERGIA_ANUAL, 2, '.', '');
-            $pagoContado = $nroPanelesRecomendados * self::COSTO_PANEL_UNITARIO;
-            // dump($pagoContado);
-            $ahorroAnual = (float) number_format(
-                self::COSTO_ELECTRICIDAD_MERCADO * 
-                self::HORAS_PARQUE * 
-                (self::POTENCIA_PANEL_UNITARIO / self::FACTOR_POTENCIA_PANEL) * 
-                $nroPanelesRecomendados *
-                ((1 - self::DEGRADACION_PANEL/100) / self::FACTOR_PRODUCCION),
-            2, '.', '');
-            // dump($ahorroAnual);
-            $ahorroMensual = (float) number_format($ahorroAnual / 12, 2, '.', '');
-            // dump($ahorroMensual);
-            $ahorroVidaUtil30Anios = (float) number_format(
-                $ahorroAnual * (pow((1 + (self::TASA_INFLACION/100)), self::VIDA_UTIL_PANEL_UNITARIO) - 1) / (self::TASA_INFLACION/100)
-            , 2, '.', '');
-            // dump($ahorroVidaUtil30Anios);
-            $recuperacionCostoInicial = (float) number_format($pagoContado / $ahorroAnual, 2, '.', '');
-            // dump($recuperacionCostoInicial);
-            $cuotaPagoFinanciado = (float) number_format(
-                $pagoContado * (self::PORCENTAJE_DE_FINANCIACION/100) * ((1 + (self::INTERES_FINANCIACION/100)) / self::PLAZOS_FINANCIACION)
-            , 2, '.', '');
-            // dump($cuotaPagoFinanciado);
-            $pagoMensualFinaciacion = $gastoPromedioMensual - $ahorroMensual + $cuotaPagoFinanciado;
-            // dump($pagoMensualFinaciacion);
-            
-            $recommendedPlan = [
-                'success' => true,
-                'data' => [
-                    'plan_recomendado'=> [
-                        'numero_paneles' => (int) $nroPanelesRecomendados, // Número
-                        'valido_hasta' => date('Y-m-d', strtotime('+1 month', strtotime(date('Y-m-d')))),
-                        'produccion_cada_panel' => $produccionCadaPanel, //kWh
-                        'produccion_energia_anual' => self::PRODUCCION_ENERGIA_ANUAL,
-                        'ahorro_mensual' => $ahorroMensual, // EUROS 
-                        'ahorro_anual' => $ahorroAnual, // EUROS 
-                        'ahorro_vida_util' => $ahorroVidaUtil30Anios, // EUROS (30 AÑOS)
-                        'pago_contado' => $pagoContado, // EUROS (es igual a coste_contado?)
-                        'recuperacion_coste_inicial' => $recuperacionCostoInicial, //AÑOS
-                        'consumo_promedio_anual' =>  $consumoPromedioAnual, //AÑOS
-                        'pago_financiado' => [
-                            'tasa_finaciacion' => SELF::INTERES_FINANCIACION/100, // (Porcentaje) - Interés de financiación
-                            'pago_mensual_finaciado' => $pagoMensualFinaciacion, // EUROS - igual al "gasto después" es el pago mensual total a pagar
-                            'cuota_pago_financiado' => $cuotaPagoFinanciado, // EUROS - es la cuota mensual
-                            // 'pago_total_finaciado' => $pagoMensualFinaciacion, // EUROS - es el pago total a pagar si es financiado
-                            'numero_cuotas' => self::PLAZOS_FINANCIACION, // Número - constante
-                            'gasto_antes' => $consumoPromedioMensual, // mensual - gasto_promedio_mensual en la factura
-                            'ahorro' => $ahorroMensual // mensual - ahorro_mensual (ahorro_anual/12)
-                        ],
-                    ],
-                    'request_id' => uniqid('MPK-'),
-                ],
-                'msg' => 'OK'
-            ];
-
-            return response()->json($recommendedPlan);
         }
-        /*
-        $nroPersonasPorHogar = $request->get('personas_x_hogar') ?? '1';
-        $artefactosUtilizados = $request->get('artefactos_utilizados') ?? ['CALEFACCION_ELECTRICA'];
-        $consumoPromedioAnual = $request->get('consumo_promedio_anual') ?? rand(3000,5000);
-        $consumoPromedioMensual = $request->get('consumo_promedio_mensual') ?? ($consumoPromedioAnual/12);
-        $nroPaneles = $request->get('numero_paneles') ?? rand(4,6);
-
-        $pagoContado = $nroPaneles * self::COSTO_PANEL_UNITARIO;
-        $ahorroMensual = $ahorroAnual / 12;
-        $ahorroVidaUtil = $ahorroAnual * (pow((1 + self::TASA_INFLACION), self::VIDA_UTIL_PANEL_UNITARIO) - 1) / self::TASA_INFLACION;
-        $recuperacionCostoInicial = ($pagoContado / $ahorroAnual);
-        $produccionCadaPanel = (float) number_format($nroPaneles / self::PRODUCCION_ENERGIA_ANUAL, 2, '.', '');
         
+        if ($tipoCalculo == 'Preciso') {
+            $consumoPromedioAnual = $request->get('consumo_promedio_anual') ?? 4200; // 476 * 12
+            $consumoPromedioMensual = (float) number_format($consumoPromedioAnual/12, 2, '.', '');
+            //
+            $gastoPromedioMensual = (float) number_format((
+                $consumoPromedioMensual *
+                (self::COSTO_ELECTRICIDAD_MERCADO / (1 - SELF::COSTES_EXTRAS/100))
+            ), 2, '.', '');
+            $gastoPromedioAnual = (float) number_format($gastoPromedioMensual*12, 2, '.', '');
+            // dump($gastoPromedioMensual);
+        }
+
+        if ($tipoCalculo == 'Simulado') {
+            $numeroPersonas = $request->get('personas_x_hogar') ?? '5';
+
+            $consumoPromedioPorFamilia = collect(self::CONSUMO_PROMEDIO_POR_FAMILIA)->where('habitantes',$numeroPersonas)->first(); 
+            $consumoPromedioPorFamilia = $consumoPromedioPorFamilia['consumo_promedio_anual'] ?? 0;
+            // dump('consumoPromedioPorFamilia', $consumoPromedioPorFamilia);
+            //
+            $artefactosUtilizados = $request->get('artefactos_utilizados') ?? ['CALEFACCION_ELECTRICA','AIRE_ACONDICIONADO','CALDERA_ELECTRICA','COCHE_ELECTRICO',];
+            //
+            $consumoPorCalefaccion = in_array('CALEFACCION_ELECTRICA', $artefactosUtilizados) ? ((2 + $numeroPersonas*0.2) * 5 * 150) : 0;
+            $consumoPorAireAcond = in_array('AIRE_ACONDICIONADO', $artefactosUtilizados) ? ((1.5 + $numeroPersonas*0.1) * 4 * 90) : 0;
+            $consumoPorCaldera = in_array('CALDERA_ELECTRICA', $artefactosUtilizados) ? ((2 + $numeroPersonas*0.2) * (0.5*$numeroPersonas) * 365) : 0;
+            $consumoPorCocheElec = in_array('COCHE_ELECTRICO', $artefactosUtilizados) ? ( ((150* (20/100)) + (10 * ($numeroPersonas * (20/100)))) * 52) : 0;
+            //
+            $consumoSimulado = [
+                'MIEMBROS_POR_FAMILIA' => $consumoPromedioPorFamilia,
+                'CALEFACCION_ELECTRICA' => $consumoPorCalefaccion,
+                'AIRE_ACONDICIONADO' => $consumoPorAireAcond,
+                'CALDERA_ELECTRICA' => $consumoPorCaldera,
+                'COCHE_ELECTRICO' => $consumoPorCocheElec,
+            ];
+            // dump('consumoSimulado', $consumoSimulado);
+            // dump(array_sum(array_values($consumoSimulado))/12);
+            $consumoPromedioMensual = (float) number_format(array_sum(array_values($consumoSimulado))/12, 2, '.', '');
+            // dump($consumoPromedioMensual);
+            $consumoPromedioAnual = (float) number_format($consumoPromedioMensual*12, 2, '.', '');
+            
+            $gastoPromedioMensual = (float) number_format((
+                $consumoPromedioMensual *
+                (self::COSTO_ELECTRICIDAD_MERCADO / (1 - self::COSTES_EXTRAS/100))
+            ), 2, '.', '');
+            // dump($gastoPromedioMensual);
+            $gastoPromedioAnual = (float) number_format($gastoPromedioMensual*12, 2, '.', '');
+        }
+        
+        $potenciaRemotaRecomendada = (float) number_format(
+            ($consumoPromedioMensual* (12 / self::HORAS_PARQUE) * self::FACTOR_PRODUCCION * (1 + self::DEGRADACION_PANEL/100))
+        , 2, '.', '');
+        // dump($potenciaRemotaRecomendada);
+        //
+        $nroPanelesRecomendados = ceil($potenciaRemotaRecomendada * (self::FACTOR_POTENCIA_PANEL/self::POTENCIA_PANEL_UNITARIO));
+        // dump($nroPanelesRecomendados);
+        
+        $produccionCadaPanel = (float) number_format($nroPanelesRecomendados / self::PRODUCCION_ENERGIA_ANUAL, 2, '.', '');
+        //
+        $pagoContado = $nroPanelesRecomendados * self::COSTO_PANEL_UNITARIO;
+        // dump($pagoContado);
+        $ahorroAnual = (float) number_format(
+            self::COSTO_ELECTRICIDAD_MERCADO * 
+            self::HORAS_PARQUE * 
+            (self::POTENCIA_PANEL_UNITARIO / self::FACTOR_POTENCIA_PANEL) * 
+            $nroPanelesRecomendados *
+            ((1 - self::DEGRADACION_PANEL/100) / self::FACTOR_PRODUCCION),
+        2, '.', '');
+        // dump($ahorroAnual);
+        $ahorroMensual = (float) number_format($ahorroAnual / 12, 2, '.', '');
+        // dump($ahorroMensual);
+        $ahorroVidaUtil30Anios = (float) number_format(
+            $ahorroAnual * (pow((1 + (self::TASA_INFLACION/100)), self::VIDA_UTIL_PANEL_UNITARIO) - 1) / (self::TASA_INFLACION/100)
+        , 2, '.', '');
+        // dump($ahorroVidaUtil30Anios);
+        $recuperacionCostoInicial = (float) number_format($pagoContado / $ahorroAnual, 1, '.', '');
+        // dump($recuperacionCostoInicial);
+        $cuotaPagoFinanciado = (float) number_format(
+            $pagoContado * (self::PORCENTAJE_DE_FINANCIACION/100) * ((1 + (self::INTERES_FINANCIACION/100)) / self::PLAZOS_FINANCIACION)
+        , 2, '.', '');
+        // dump($cuotaPagoFinanciado);
+        $pagoMensualFinaciado = (float) number_format($gastoPromedioMensual - $ahorroMensual + $cuotaPagoFinanciado, 2, '.', '');
+        // dump($pagoMensualFinaciado);
         $recommendedPlan = [
             'success' => true,
             'data' => [
                 'plan_recomendado'=> [
-                    'numero_paneles' => (int) $nroPaneles, // Número
-                    'valido_hasta' => date('Y-m-d', strtotime('+1 month', strtotime(date('Y-m-d')))),
+                    'ahorro_anual' => $ahorroAnual, // EUROS 
+                    'ahorro_mensual' => $ahorroMensual, // EUROS 
+                    'ahorro_vida_util' => $ahorroVidaUtil30Anios, // EUROS (30 AÑOS)
+                    'consumo_promedio_anual' =>  $consumoPromedioAnual, // kWh
+                    'consumo_promedio_mensual' =>  $consumoPromedioMensual, // kWh
+                    'numero_paneles' => (int) $nroPanelesRecomendados, // Número
+                    'pago_contado' => $pagoContado, // EUROS
+                    'pago_financiado' => [
+                        'tasa_finaciacion' => SELF::INTERES_FINANCIACION/100, // (Porcentaje) - Interés de financiación
+                        'pago_mensual_finaciado' => $pagoMensualFinaciado, // EUROS - igual al "gasto después" es el pago mensual total a pagar
+                        'cuota_pago_financiado' => $cuotaPagoFinanciado, // EUROS - es la cuota mensual
+                        // 'pago_total_finaciado' => $pagoMensualFinaciado, // EUROS - es el pago total a pagar si es financiado
+                        'numero_cuotas' => self::PLAZOS_FINANCIACION, // Número - constante
+                        'gasto_antes' => $gastoPromedioMensual, // mensual - gasto_promedio_mensual en la factura
+                        'ahorro' => $ahorroMensual // mensual - ahorro_mensual (ahorro_anual/12)
+                    ],
                     'produccion_cada_panel' => $produccionCadaPanel, //kWh
                     'produccion_energia_anual' => self::PRODUCCION_ENERGIA_ANUAL,
-                    'ahorro_mensual' => (float) number_format($ahorroMensual, 2, '.', ''), // EUROS 
-                    'ahorro_anual' => (float) number_format($ahorroAnual, 2, '.', ''), // EUROS 
-                    'ahorro_vida_util' => (float) number_format($ahorroVidaUtil, 2, '.', ''), // EUROS (30 AÑOS)
-                    'pago_contado' => (float) number_format($pagoContado, 2, '.', ''), // EUROS (es igual a coste_contado?)
-                    'recuperacion_coste_inicial' => (float) number_format($recuperacionCostoInicial, 1, '.', ''), //AÑOS
-                    'consumo_promedio_anual' => (float) number_format($recuperacionCostoInicial, 1, '.', ''), //AÑOS
-                    'pago_financiado' => [
-                        'tasa_finaciacion' => 6.5, // (Porcentaje) - Interés de financiación
-                        'pago_mensual_financiacion' => 107, // EUROS - igual al "gasto después" es el pago mensual total a pagar
-                        'cuota_pago_financiado' => 69, // EUROS - es la cuota mensual
-                        'pago_total_finaciado' => 4500, // EUROS - es el pago total a pagar si es financiado
-                        'numero_cuotas' => 96, // Número - constante
-                        'gasto_antes' => 120, // mensual - gasto_promedio_mensual en la factura
-                        'ahorro' => 82 // mensual - ahorro_mensual (ahorro_anual/12)
-                    ],
+                    'recuperacion_coste_inicial' => $recuperacionCostoInicial, //AÑOS
+                    'valido_hasta' => date('Y-m-d', strtotime('+1 month', strtotime(date('Y-m-d')))),
+                    'calculos_internos' => [
+                        'gasto_promedio_mensual' =>  $gastoPromedioMensual, // kWh
+                        'consumo_promedio_mensual' =>  $consumoPromedioMensual, // kWh
+                        'potencia_recomendada' =>  $potenciaRemotaRecomendada, // kWh
+                    ]
                 ],
                 'request_id' => uniqid('MPK-'),
             ],
@@ -183,7 +225,6 @@ class MPKController extends Controller
         ];
 
         return response()->json($recommendedPlan);
-        */
     }
 
     public function getConsumoByCUPS(Request $request)
