@@ -63,8 +63,9 @@ class MPKController extends Controller
             'data' => [
                 'COSTE_ELECTRICIDAD_MERCADO' => 0.16, // COSTO_ELECTRICIDAD_MERCADO
                 'COSTES_EXTRAS' => 32, // COSTES_EXTRAS
-                'INFLACION' => 3, // TASA_INFLACION
+                'TASA_INFLACION' => 3, // TASA_INFLACION
                 'FACTOR_PRODUCCION' => 1, // FACTOR_PRODUCCION
+                'FACTOR_POTENCIA_PANEL' => self::FACTOR_POTENCIA_PANEL, // FACTOR_POTENCIA_PANEL
                 'INTERES_FINANCIACION' => 6, // INTERES_FINANCIACION
                 'PORCENTAJE_DE_FINANCIACION' => 100, // PORCENTAJE_DE_FINANCIACION
                 'PLAZOS_FINANCIACION' => 96, // PLAZOS_FINANCIACION
@@ -75,7 +76,29 @@ class MPKController extends Controller
                 'VIDA_UTIL_PLANTA' => 30, // VIDA_UTIL_PANEL_UNITARIO
                 'PRODUCCION_ENERGIA_ANUAL' => 877.8, // PRODUCCION_ENERGIA_ANUAL
                 'EURO_KWH_30_ANIOS' => 0.03, // EURO_KWH_30_ANIOS
-                'COSTO_ENERGIA_MEDIO_ESPANA_ULTIMOS_5_ANIOS' => 0.1 // COSTO_ENERGIA_MEDIO_ESPANA_ULTIMOS_5_ANIOS
+                'COSTO_ENERGIA_MEDIO_ESPANA_ULTIMOS_5_ANIOS' => 0.1, // COSTO_ENERGIA_MEDIO_ESPANA_ULTIMOS_5_ANIOS
+                'CONSUMO_PROMEDIO_POR_FAMILIA' => [
+                    [
+                        'habitantes' => '1',
+                        'consumo_promedio_anual' => 2200
+                    ],
+                    [
+                        'habitantes' => '2',
+                        'consumo_promedio_anual' => 2450
+                    ],
+                    [
+                        'habitantes' => '3',
+                        'consumo_promedio_anual' => 2700
+                    ],
+                    [
+                        'habitantes' => '4',
+                        'consumo_promedio_anual' => 3000
+                    ],
+                    [
+                        'habitantes' => '5',
+                        'consumo_promedio_anual' => 3200
+                    ],
+                ]
             ],
             'msg' => 'OK'
         ];
@@ -198,6 +221,8 @@ class MPKController extends Controller
                     'ahorro_vida_util' => $ahorroVidaUtil30Anios, // EUROS (30 AÑOS)
                     'consumo_promedio_anual' =>  $consumoPromedioAnual, // kWh
                     'consumo_promedio_mensual' =>  $consumoPromedioMensual, // kWh
+                    'gasto_promedio_mensual' =>  $gastoPromedioMensual, // kWh
+                    'gasto_promedio_anual' =>  $gastoPromedioAnual, // kWh
                     'numero_paneles' => (int) $nroPanelesRecomendados, // Número
                     'pago_contado' => $pagoContado, // EUROS
                     'pago_financiado' => [
@@ -333,8 +358,9 @@ class MPKController extends Controller
                 "consumoActivaAnualP4" => 0,
                 "consumoActivaAnualP5" => 0,
                 "consumoActivaAnualP6" => 0,
-                "consumoTotal" => 3189000,
-                "consumoAnual" => 3189000,
+                "consumoTotal" => 6720,
+                // "consumoAnual" => 3189000,
+                "consumoAnual" => 6720,
                 "direccionCompletaPs" => null
             ],
             'msg' => 'OK'
