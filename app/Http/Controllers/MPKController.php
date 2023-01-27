@@ -61,7 +61,7 @@ class MPKController extends Controller
         $constants = [
             'success' => true,
             'data' => [
-                'COSTE_ELECTRICIDAD_MERCADO' => 0.16, // COSTO_ELECTRICIDAD_MERCADO
+                'COSTE_ELECTRICIDAD_MERCADO' => 0.17, // COSTO_ELECTRICIDAD_MERCADO
                 'COSTES_EXTRAS' => 32, // COSTES_EXTRAS
                 'TASA_INFLACION' => 3, // TASA_INFLACION
                 'FACTOR_PRODUCCION' => 1, // FACTOR_PRODUCCION
