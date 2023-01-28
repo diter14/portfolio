@@ -61,23 +61,23 @@ class MPKController extends Controller
         $constants = [
             'success' => true,
             'data' => [
-                'COSTE_ELECTRICIDAD_MERCADO' => 0.17, // COSTO_ELECTRICIDAD_MERCADO
-                'COSTES_EXTRAS' => 32, // COSTES_EXTRAS
-                'TASA_INFLACION' => 3, // TASA_INFLACION
-                'FACTOR_PRODUCCION' => 1, // FACTOR_PRODUCCION
-                'FACTOR_POTENCIA_PANEL' => self::FACTOR_POTENCIA_PANEL, // FACTOR_POTENCIA_PANEL
-                'INTERES_FINANCIACION' => 6, // INTERES_FINANCIACION
-                'PORCENTAJE_DE_FINANCIACION' => 100, // PORCENTAJE_DE_FINANCIACION
-                'PLAZOS_FINANCIACION' => 96, // PLAZOS_FINANCIACION
-                'POTENCIA_PANEL' => 660, // POTENCIA_PANEL_UNITARIO
-                'DEGRADACION_PANEL' => 5, // DEGRADACION_PANEL
-                'HORAS_PARQUE' => 1400, // HORAS_PARQUE
-                'COSTE_PANEL' => 901, // COSTO_PANEL_UNITARIO
-                'VIDA_UTIL_PLANTA' => 30, // VIDA_UTIL_PANEL_UNITARIO
-                'PRODUCCION_ENERGIA_ANUAL' => 877.8, // PRODUCCION_ENERGIA_ANUAL
-                'EURO_KWH_30_ANIOS' => 0.03, // EURO_KWH_30_ANIOS
-                'COSTO_ENERGIA_MEDIO_ESPANA_ULTIMOS_5_ANIOS' => 0.1, // COSTO_ENERGIA_MEDIO_ESPANA_ULTIMOS_5_ANIOS
-                'CONSUMO_PROMEDIO_POR_FAMILIA' => [
+                "COSTE_ELECTRICIDAD_MERCADO" => 0.17,
+                "COSTE_PANEL" => 901,
+                "COSTES_EXTRAS" => 32,
+                "COSTO_ENERGIA_MEDIO_ESPANA_ULTIMOS_5_ANIOS" => 0.1,
+                "DEGRADACION_PANEL" => 5,
+                "EURO_KWH_30_ANIOS" => 0.03,
+                "FACTOR_POTENCIA_PANEL" => 1000,
+                "FACTOR_PRODUCCION" => 1,
+                "HORAS_PARQUE" => 1400,
+                "INTERES_FINANCIACION" => 6,
+                "PLAZOS_FINANCIACION" => 96,
+                "PORCENTAJE_DE_FINANCIACION" => 100,
+                "POTENCIA_PANEL" => 660,
+                "PRODUCCION_ENERGIA_ANUAL" => 877.8,
+                "TASA_INFLACION" => 3,
+                "VIDA_UTIL_PLANTA" => 30,
+                "CONSUMO_PROMEDIO_POR_FAMILIA" => [
                     [
                         'habitantes' => '1',
                         'consumo_promedio_anual' => 2200
@@ -98,6 +98,22 @@ class MPKController extends Controller
                         'habitantes' => '5',
                         'consumo_promedio_anual' => 3200
                     ],
+                ],
+                "HIDRO_CONSTANTS" => [
+                    "POTENCIA_HIDRO" => 100,
+                    "DEGRADACION_HIDRO" => 0,
+                    "HORAS_EQUIVALENTES_HIDRO" => 2800,
+                    "COSTE_HIDRO_MINI" => 355,
+                    "VIDA_UTIL_PLANTA" => 30,
+                    "PRODUCCION_ENERGIA_ANUAL" => 280,
+                    "EURO_KWH_30_ANIOS" => 0.0423
+                ],
+                "MIX_CONSTANTS" => [
+                    "POTENCIA_PICO_MIX" => 760,
+                    "PRODUCCION_ANUAL_UD_MIX" => 1157.8,
+                    "COSTE_MIX_UNITARIO" => 1256,
+                    "ENERGIA_ENTREGADA_30_ANIOS" => 34734,
+                    "EURO_KWH_30_ANIOS" => 0.0362
                 ]
             ],
             'msg' => 'OK'
